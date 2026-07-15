@@ -1,179 +1,304 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>CEPACOR - Centro General de Padres Corona School</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <style>
+<title>CEPACOR - Centro General de Padres Corona School</title>
 
-        body{
-            margin:0;
-            font-family:Arial, Helvetica, sans-serif;
-            background:#f5f5f5;
-        }
+<style>
 
-        header{
-            background:#355E3B;
-            color:white;
-            text-align:center;
-            padding:40px 20px;
-        }
+body{
+    margin:0;
+    font-family:Arial, Helvetica, sans-serif;
+    background:#f5f5f5;
+}
 
-        .logo{
-            width:170px;
-            margin-bottom:20px;
-        }
 
-        h1{
-            margin:0;
-            font-size:42px;
-        }
+/* HEADER */
 
-        .subtitulo{
-            font-size:22px;
-            margin-top:10px;
-        }
+header{
+    background:#355E3B;
+    color:white;
+    text-align:center;
+    padding:40px 20px;
+}
 
-        .colegio{
-            font-size:28px;
-            font-weight:bold;
-            margin-top:5px;
-        }
+.logo{
+    width:170px;
+    margin-bottom:20px;
+}
 
-        .boton{
-            display:inline-block;
-            margin-top:25px;
-            background:#F4C430;
-            color:#355E3B;
-            padding:15px 35px;
-            text-decoration:none;
-            font-weight:bold;
-            border-radius:40px;
-        }
+h1{
+    margin:0;
+    font-size:42px;
+}
 
-        nav{
-            background:#F4C430;
-            padding:18px;
-            text-align:center;
-        }
+.subtitulo{
+    font-size:22px;
+}
 
-        nav a{
-            text-decoration:none;
-            color:#355E3B;
-            font-weight:bold;
-            margin:0 20px;
-        }
+.colegio{
+    font-size:28px;
+    font-weight:bold;
+}
 
-        .bienvenida{
-            background:white;
-            padding:60px;
-            text-align:center;
-        }
 
-        .tarjetas{
-            display:flex;
-            justify-content:center;
-            flex-wrap:wrap;
-            gap:25px;
-            padding:40px;
-        }
+.boton{
+    display:inline-block;
+    margin-top:25px;
+    background:#F4C430;
+    color:#355E3B;
+    padding:15px 35px;
+    text-decoration:none;
+    font-weight:bold;
+    border-radius:40px;
+}
 
-        .tarjeta{
-            width:280px;
-            background:white;
-            padding:25px;
-            border-radius:15px;
-            box-shadow:0 0 15px rgba(0,0,0,.15);
-        }
-/* SECCIÓN DIRECTIVA */
 
-.directiva{
-    background:white;
-    padding:60px 20px;
+/* MENU */
+
+nav{
+    background:#F4C430;
+    padding:18px;
     text-align:center;
 }
 
-.directiva h2{
+nav a{
+    text-decoration:none;
     color:#355E3B;
-    font-size:35px;
-    margin-bottom:40px;
+    font-weight:bold;
+    margin:0 20px;
 }
 
-.equipo{
-    display:flex;
-    justify-content:center;
-    flex-wrap:wrap;
-    gap:35px;
+
+/* HERO */
+
+.hero{
+
+    background:
+    linear-gradient(
+        rgba(53,94,59,.35),
+        rgba(53,94,59,.35)
+    ),
+ url("imagenes/banner/banner-corona.png");
+
+    background-size:cover;
+    background-position:center;
+
+    padding:80px 20px;
+    text-align:center;
+    color:white;
 }
 
-.miembro{
-    width:220px;
+
+.hero-contenido{
+    max-width:900px;
+    margin:auto;
 }
 
-.miembro img{
-    width:160px;
-    height:160px;
-    border-radius:50%;
-    object-fit:cover;
-    border:6px solid #F4C430;
+
+.hero h2{
+    font-size:40px;
 }
 
-.miembro h3{
+
+.hero p{
+    font-size:20px;
+    line-height:1.6;
+}
+
+
+.boton-hero{
+
+    display:inline-block;
+    margin-top:30px;
+
+    background:#F4C430;
     color:#355E3B;
-    margin-top:15px;
-}
 
-.miembro p{
+    padding:15px 35px;
+
+    border-radius:40px;
+
+    text-decoration:none;
+
     font-weight:bold;
 }
-        footer{
-            background:#355E3B;
-            color:white;
-            text-align:center;
-            padding:20px;
-        }
 
-    </style>
+
+/* BIENVENIDA */
+
+
+.bienvenida{
+
+    background:white;
+
+    padding:60px;
+
+    text-align:center;
+
+}
+
+
+
+/* TARJETAS */
+
+
+.tarjetas{
+
+    display:flex;
+
+    justify-content:center;
+
+    flex-wrap:wrap;
+
+    gap:25px;
+
+    padding:40px;
+
+}
+
+
+.tarjeta{
+
+    width:280px;
+
+    background:white;
+
+    padding:25px;
+
+    border-radius:15px;
+
+    box-shadow:0 0 15px rgba(0,0,0,.15);
+
+}
+
+
+/* DIRECTIVA */
+
+
+.directiva{
+
+    background:white;
+
+    padding:60px 20px;
+
+    text-align:center;
+
+}
+
+
+.directiva h2{
+
+    color:#355E3B;
+
+    font-size:35px;
+
+}
+
+
+.equipo{
+
+    display:flex;
+
+    justify-content:center;
+
+    flex-wrap:wrap;
+
+    gap:35px;
+
+}
+
+
+.miembro{
+
+    width:220px;
+
+}
+
+
+.miembro img{
+
+    width:160px;
+
+    height:160px;
+
+    border-radius:50%;
+
+    object-fit:cover;
+
+    border:6px solid #F4C430;
+
+}
+
+
+.miembro h3{
+
+    color:#355E3B;
+
+}
+
+
+/* FOOTER */
+
+
+footer{
+
+    background:#355E3B;
+
+    color:white;
+
+    text-align:center;
+
+    padding:20px;
+
+}
+
+
+</style>
 
 </head>
 
+
 <body>
+
 
 <header>
 
+
 <img src="imagenes/logo-cepacor.jpeg" class="logo">
 
+
 <h1>CEPACOR</h1>
+
 
 <p class="subtitulo">
 Centro General de Padres y Apoderados
 </p>
 
+
 <p class="colegio">
 Corona School
 </p>
+
 
 <a href="#" class="boton">
 Hazte Socio
 </a>
 
+
 </header>
+
 
 <nav>
 
 <a href="#">Inicio</a>
-
 <a href="#">Nosotros</a>
-
 <a href="#">Directiva</a>
-
 <a href="#">Actividades</a>
-
 <a href="#">Convenios</a>
-
 <a href="#">Galería</a>
-
 <a href="#">Contacto</a>
 
 </nav>
@@ -181,7 +306,10 @@ Hazte Socio
 
     <div class="hero-contenido">
 
-        <h2>Construyendo una comunidad educativa más fuerte</h2>
+        <h2>
+            Construyendo una comunidad educativa más fuerte
+        </h2>
+
 
         <p>
             En CEPACOR trabajamos junto a las familias y al Colegio Corona School
@@ -189,93 +317,215 @@ Hazte Socio
             beneficios para toda la comunidad educativa.
         </p>
 
+
         <a href="#" class="boton-hero">
             Conoce nuestros convenios
         </a>
 
     </div>
 
-
 </section>
+
 
 
 <section class="bienvenida">
 
-    <h2>Bienvenidos a CEPACOR</h2>
+    <h2>
+        Bienvenidos a CEPACOR
+    </h2>
+
 
     <p>
-        Trabajando juntos por el bienestar de nuestros estudiantes y fortaleciendo la comunidad educativa Corona School.
+        Trabajando juntos por el bienestar de nuestros estudiantes
+        y fortaleciendo la comunidad educativa Corona School.
     </p>
 
 </section>
 
 
 
+
 <section class="tarjetas">
 
-    <div class="tarjeta">
-        <h2>🎉 Actividades</h2>
-        <p>Kermesse, Bingo, Jeans Day, campañas solidarias y mucho más.</p>
-    </div>
 
     <div class="tarjeta">
-        <h2>🤝 Convenios</h2>
-        <p>Más de 15 beneficios exclusivos para nuestros socios.</p>
+
+        <h2>🎉 Actividades</h2>
+
+        <p>
+            Kermesse, Bingo, Jeans Day, campañas solidarias
+            y muchas actividades para nuestra comunidad.
+        </p>
+
     </div>
+
+
+
     <div class="tarjeta">
+
+        <h2>🤝 Convenios</h2>
+
+        <p>
+            Más de 15 beneficios exclusivos para nuestros socios CEPACOR.
+        </p>
+
+    </div>
+
+
+
+    <div class="tarjeta">
+
         <h2>👨‍👩‍👧‍👦 Comunidad</h2>
-        <p>Trabajamos junto a las familias por el bienestar de todos nuestros estudiantes.</p>
+
+        <p>
+            Trabajamos junto a las familias por el bienestar
+            de todos nuestros estudiantes.
+        </p>
+
     </div>
 
 
 </section>
+
+
+
+
+
 <section class="directiva">
 
-    <h2>Nuestra Directiva CEPACOR 2026 - 2028</h2>
 
-    <div class="equipo">
+<h2>
+Nuestra Directiva CEPACOR 2026 - 2028
+</h2>
 
-        <div class="miembro">
-            <img src="imagenes/directiva/tatiana.jpg" alt="Tatiana Barahona">
-            <h3>Tatiana Barahona</h3>
-            <p>Presidenta</p>
-        </div>
 
-        <div class="miembro">
-            <img src="imagenes/directiva/paula.jpg" alt="Paula González">
-            <h3>Paula González</h3>
-            <p>Tesorera</p>
-        </div>
 
-        <div class="miembro">
-            <img src="imagenes/directiva/maricela.jpg" alt="Maricela Sánchez">
-            <h3>Maricela Sánchez</h3>
-            <p>Secretaria</p>
-        </div>
+<div class="equipo">
 
-        <div class="miembro">
-            <img src="imagenes/directiva/maria.jpg" alt="María Pérez">
-            <h3>María Pérez</h3>
-            <p>Directora</p>
-        </div>
 
-        <div class="miembro">
-            <img src="imagenes/directiva/carolyn.jpg" alt="Carolyn Salazar">
-            <h3>Carolyn Salazar</h3>
-            <p>Directora</p>
-        </div>
+
 <div class="miembro">
-    <img src="imagenes/directiva/priccila.jpg" alt="Priccila Taucare">
-    <h3>Priccila Taucare</h3>
-    <p>Directora</p>
+
+<img src="imagenes/directiva/tatiana.jpg">
+
+<h3>
+Tatiana Barahona
+</h3>
+
+<p>
+Presidenta
+</p>
+
 </div>
-    </div>
+
+
+
+
+<div class="miembro">
+
+<img src="imagenes/directiva/paula.jpg">
+
+<h3>
+Paula González
+</h3>
+
+<p>
+Tesorera
+</p>
+
+</div>
+
+
+
+
+
+<div class="miembro">
+
+<img src="imagenes/directiva/maricela.jpg">
+
+<h3>
+Maricela Sánchez
+</h3>
+
+<p>
+Secretaria
+</p>
+
+</div>
+
+
+
+
+
+<div class="miembro">
+
+<img src="imagenes/directiva/maria.jpg">
+
+<h3>
+María Pérez
+</h3>
+
+<p>
+Directora
+</p>
+
+</div>
+
+
+
+
+
+<div class="miembro">
+
+<img src="imagenes/directiva/carolyn.jpg">
+
+<h3>
+Carolyn Salazar
+</h3>
+
+<p>
+Directora
+</p>
+
+</div>
+
+
+
+
+
+<div class="miembro">
+
+<img src="imagenes/directiva/priccila.jpg">
+
+<h3>
+Priccila Taucare
+</h3>
+
+<p>
+Directora
+</p>
+
+</div>
+
+
+
+</div>
+
 
 </section>
+
+
+
+
+
 <footer>
-    © 2026 CEPACOR - Centro General de Padres y Apoderados Corona School
+
+© 2026 CEPACOR - Centro General de Padres y Apoderados Corona School
+
 </footer>
 
-</body>
-</html>
 
+
+</body>
+
+</html>

@@ -6,48 +6,26 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>CEPACOR - Centro General de Padres Corona School</title>
-
+<title>CEPACOR - Centro General de Padres y Apoderados Corona School</title>
 
 <style>
 
+*{
+    box-sizing:border-box;
+}
+
 body{
+
     margin:0;
     font-family:Arial, Helvetica, sans-serif;
     background:#f5f5f5;
+    color:#333;
+
 }
 
 
 /* HEADER */
-/* NOSOTROS */
 
-.nosotros{
-
-    background:white;
-    padding:70px 30px;
-    text-align:center;
-    width:100%;
-
-}
-
-
-.nosotros h2{
-
-    color:#355E3B;
-    font-size:35px;
-    margin-bottom:25px;
-
-}
-
-
-.nosotros p{
-
-    max-width:900px;
-    margin:15px auto;
-    font-size:18px;
-    line-height:1.7;
-
-}
 header{
 
     background:#355E3B;
@@ -61,15 +39,15 @@ header{
 .logo{
 
     width:170px;
-    margin-bottom:20px;
+    border-radius:10px;
 
 }
 
 
 h1{
 
-    margin:0;
     font-size:42px;
+    margin:15px 0;
 
 }
 
@@ -89,7 +67,6 @@ h1{
 }
 
 
-
 .boton{
 
     display:inline-block;
@@ -97,11 +74,12 @@ h1{
     background:#F4C430;
     color:#355E3B;
     padding:15px 35px;
+    border-radius:40px;
     text-decoration:none;
     font-weight:bold;
-    border-radius:40px;
 
 }
+
 
 
 /* MENU */
@@ -117,10 +95,10 @@ nav{
 
 nav a{
 
-    text-decoration:none;
     color:#355E3B;
+    text-decoration:none;
     font-weight:bold;
-    margin:0 20px;
+    margin:0 15px;
 
 }
 
@@ -128,74 +106,78 @@ nav a{
 
 /* HERO */
 
-
 .hero{
 
-background:
-linear-gradient(
-rgba(53,94,59,.25),
-rgba(53,94,59,.25)
-),
-url("imagenes/banner/banner-corona.png");
+    background:
+    linear-gradient(
+    rgba(53,94,59,.35),
+    rgba(53,94,59,.35)
+    ),
+    url("imagenes/banner/banner-corona.png");
 
+    background-size:cover;
+    background-position:center;
 
-background-size:cover;
-background-position:center;
-background-repeat:no-repeat;
+    padding:120px 20px;
 
-padding:120px 20px;
-
-text-align:center;
-
-color:white;
+    color:white;
+    text-align:center;
 
 }
-
 
 
 .hero-contenido{
 
-max-width:900px;
-margin:auto;
+    max-width:900px;
+    margin:auto;
 
 }
-
 
 
 .hero h2{
 
-font-size:40px;
+    font-size:40px;
 
 }
-
 
 
 .hero p{
 
-font-size:20px;
-line-height:1.6;
+    font-size:20px;
+    line-height:1.6;
+
+}
+
+
+.boton-hero{
+
+    display:inline-block;
+    margin-top:30px;
+    background:#F4C430;
+    color:#355E3B;
+    padding:15px 35px;
+    border-radius:40px;
+    text-decoration:none;
+    font-weight:bold;
 
 }
 
 
 
-.boton-hero{
+/* SECCIONES */
 
-display:inline-block;
+section{
 
-margin-top:30px;
+    padding:70px 30px;
+    text-align:center;
 
-background:#F4C430;
+}
 
-color:#355E3B;
 
-padding:15px 35px;
+h2{
 
-border-radius:40px;
-
-text-decoration:none;
-
-font-weight:bold;
+    color:#355E3B;
+    font-size:35px;
 
 }
 
@@ -203,38 +185,19 @@ font-weight:bold;
 
 /* BIENVENIDA */
 
-
 .bienvenida{
 
-background:white;
-
-padding:70px 30px;
-
-text-align:center;
+    background:white;
 
 }
-
-
-
-.bienvenida h2{
-
-color:#355E3B;
-
-font-size:35px;
-
-}
-
 
 
 .bienvenida p{
 
-max-width:900px;
-
-margin:auto;
-
-font-size:18px;
-
-line-height:1.7;
+    max-width:900px;
+    margin:auto;
+    font-size:18px;
+    line-height:1.7;
 
 }
 
@@ -242,134 +205,59 @@ line-height:1.7;
 
 /* OBJETIVOS */
 
-
 .objetivos{
 
-display:flex;
-
-justify-content:center;
-
-flex-wrap:wrap;
-
-gap:30px;
-
-margin-top:45px;
+    display:flex;
+    justify-content:center;
+    flex-wrap:wrap;
+    gap:30px;
+    margin-top:45px;
 
 }
 
 
+.objetivo{
 
-.objetivos div{
-
-width:260px;
-
-background:#f5f5f5;
-
-padding:25px;
-
-border-radius:15px;
-
-box-shadow:0 5px 15px rgba(0,0,0,.12);
+    width:260px;
+    background:#f5f5f5;
+    padding:25px;
+    border-radius:15px;
+    box-shadow:0 5px 15px rgba(0,0,0,.12);
+    transition:.3s;
 
 }
 
 
+.objetivo:hover{
 
-.objetivos h3{
-
-color:#355E3B;
-
-font-size:22px;
+    transform:translateY(-10px);
 
 }
 
 
+.objetivo h3{
 
-/* CONVENIOS */
-
-
-.convenios{
-
-background:#f5f5f5;
-
-padding:70px 30px;
-
-text-align:center;
+    color:#355E3B;
+    font-size:22px;
 
 }
 
 
-
-.convenios h2{
-
-color:#355E3B;
-
-font-size:35px;
-
-}
-
-
-
-.lista-convenios{
-
-display:flex;
-
-justify-content:center;
-
-flex-wrap:wrap;
-
-gap:30px;
-
-}
-
-
-
-.convenio{
-
-width:260px;
-
-background:white;
-
-padding:25px;
-
-border-radius:15px;
-
-box-shadow:0 5px 15px rgba(0,0,0,.12);
-
-}
-
-
-
-.convenio img{
-
-width:140px;
-
-height:100px;
-
-object-fit:contain;
-
-}
-
-
-
-.convenio h3{
-
-color:#355E3B;
 /* NOSOTROS */
 
 .nosotros{
 
     background:white;
-    padding:70px 30px;
-    text-align:center;
 
 }
 
 
-.nosotros h2{
+.nosotros p{
 
-    color:#355E3B;
-    font-size:35px;
+    max-width:900px;
+    margin:15px auto;
+    font-size:18px;
+    line-height:1.7;
 
 }
 
@@ -385,7 +273,7 @@ color:#355E3B;
 }
 
 
-.nosotros-contenido div{
+.nosotros-card{
 
     width:260px;
     background:#f5f5f5;
@@ -396,26 +284,109 @@ color:#355E3B;
 }
 
 
-.nosotros-contenido h3{
+.nosotros-card h3{
 
     color:#355E3B;
 
 }
-}/* DIRECTIVA */
+/* CONVENIOS */
+
+.convenios{
+
+    background:#f5f5f5;
+
+}
+
+
+.lista-convenios{
+
+    display:flex;
+    justify-content:center;
+    flex-wrap:wrap;
+    gap:30px;
+
+}
+
+
+.convenio{
+
+    width:260px;
+    background:white;
+    padding:25px;
+    border-radius:15px;
+    box-shadow:0 5px 15px rgba(0,0,0,.12);
+
+}
+
+
+.logo-pendiente{
+
+    width:140px;
+    height:100px;
+    margin:auto;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    background:#eeeeee;
+    border-radius:10px;
+    color:#355E3B;
+    font-weight:bold;
+
+}
+
+
+.convenio h3{
+
+    color:#355E3B;
+
+}
+
+
+
+/* ACTIVIDADES */
+
+.actividades{
+
+    background:white;
+
+}
+
+
+.lista-actividades{
+
+    display:flex;
+    justify-content:center;
+    flex-wrap:wrap;
+    gap:30px;
+
+}
+
+
+.actividad{
+
+    width:260px;
+    background:#f5f5f5;
+    padding:25px;
+    border-radius:15px;
+    box-shadow:0 5px 15px rgba(0,0,0,.12);
+
+}
+
+
+.actividad h3{
+
+    color:#355E3B;
+    font-size:22px;
+
+}
+
+
+
+/* DIRECTIVA */
 
 .directiva{
 
-    background:white;
-    padding:70px 30px;
-    text-align:center;
-
-}
-
-
-.directiva h2{
-
-    color:#355E3B;
-    font-size:35px;
+    background:#f5f5f5;
 
 }
 
@@ -458,117 +429,43 @@ color:#355E3B;
 
     color:#355E3B;
 
-}/* DIRECTIVA */
+}
 
-.directiva{
 
-    background:white;
-    padding:60px 20px;
+/* FOOTER */
+
+footer{
+
+    background:#355E3B;
+    color:white;
     text-align:center;
-
-}
-
-
-.directiva h2{
-
-    color:#355E3B;
-    font-size:35px;
-
-}
-
-
-.equipo{
-
-    display:flex;
-    justify-content:center;
-    flex-wrap:wrap;
-    gap:35px;
-
-}
-
-
-.miembro{
-
-    width:220px;
-    text-align:center;
-
-}
-
-
-.miembro img{
-
-    width:160px;
-    height:160px;
-    border-radius:50%;
-    object-fit:cover;
-    border:6px solid #F4C430;
-
-}
-
-
-.miembro h3{
-
-    color:#355E3B;
-
-}
-
-.logo-pendiente{
-
-    width:140px;
-    height:100px;
-    margin:auto;
-    display:flex;
-    align-items:center;
-    justify-content:center;
-    background:#eeeeee;
-    color:#355E3B;
-    font-weight:bold;
-    border-radius:10px;
-
-}/* ACTIVIDADES */
-
-.actividades{
-
-    background:white;
-    padding:70px 30px;
-    text-align:center;
-
-}
-
-
-.actividades h2{
-
-    color:#355E3B;
-    font-size:35px;
-
-}
-
-
-.lista-actividades{
-
-    display:flex;
-    justify-content:center;
-    flex-wrap:wrap;
-    gap:30px;
-
-}
-
-
-.actividad{
-
-    width:260px;
-    background:#f5f5f5;
     padding:25px;
-    border-radius:15px;
-    box-shadow:0 5px 15px rgba(0,0,0,.12);
 
 }
 
 
-.actividad h3{
+/* RESPONSIVE */
 
-    color:#355E3B;
-    font-size:22px;
+@media(max-width:700px){
+
+    h1{
+        font-size:32px;
+    }
+
+
+    .hero h2{
+
+        font-size:30px;
+
+    }
+
+
+    nav a{
+
+        display:block;
+        margin:10px;
+
+    }
 
 }
 
@@ -623,9 +520,7 @@ Hazte Socio
 
 <section class="hero">
 
-
 <div class="hero-contenido">
-
 
 <h2>
 Construyendo una comunidad educativa más fuerte
@@ -646,13 +541,11 @@ Conoce nuestros convenios
 
 </div>
 
-
 </section>
 
 
 
 <section class="bienvenida">
-
 
 <h2>
 Bienvenidos a CEPACOR
@@ -667,11 +560,10 @@ que aporten al bienestar de toda nuestra comunidad educativa.
 </p>
 
 
-
 <div class="objetivos">
 
 
-<div>
+<div class="objetivo">
 
 <h3>🤝 Participación</h3>
 
@@ -683,8 +575,7 @@ estudiantes y colegio.
 </div>
 
 
-
-<div>
+<div class="objetivo">
 
 <h3>🎯 Compromiso</h3>
 
@@ -696,8 +587,7 @@ para nuestra comunidad escolar.
 </div>
 
 
-
-<div>
+<div class="objetivo">
 
 <h3>🌱 Comunidad</h3>
 
@@ -711,10 +601,9 @@ educativo.
 
 </div>
 
-
 </section>
 
-<section class="nosotros">
+
 
 <section class="nosotros">
 
@@ -731,46 +620,38 @@ de nuestra comunidad educativa.
 </p>
 
 
-
 <div class="nosotros-contenido">
 
 
-<div>
+<div class="nosotros-card">
 
 <h3>🎯 Misión</h3>
 
 <p>
 Promover la participación activa de las familias,
-generando espacios de colaboración, apoyo y convivencia
-en beneficio de nuestros estudiantes.
+generando espacios de colaboración y apoyo.
 </p>
 
 </div>
 
 
-
-<div>
+<div class="nosotros-card">
 
 <h3>🌱 Visión</h3>
 
 <p>
-Ser una comunidad organizada, comprometida y cercana,
-que contribuya al crecimiento integral de nuestros estudiantes
-y familias.
+Ser una comunidad organizada, comprometida y cercana.
 </p>
 
 </div>
 
 
-
-<div>
+<div class="nosotros-card">
 
 <h3>🤝 Compromiso</h3>
 
 <p>
-Trabajamos junto al Colegio Corona School para impulsar
-actividades, beneficios y proyectos que fortalezcan
-nuestra comunidad educativa.
+Trabajamos junto al colegio fortaleciendo nuestra comunidad.
 </p>
 
 </div>
@@ -778,12 +659,8 @@ nuestra comunidad educativa.
 
 </div>
 
-
-
 </section>
-
 <section class="convenios">
-
 
 <h2>
 Convenios y Beneficios CEPACOR 2026
@@ -792,8 +669,7 @@ Convenios y Beneficios CEPACOR 2026
 
 <p>
 Nuestros socios pueden acceder a beneficios exclusivos
-gracias a las alianzas con empresas y profesionales
-que apoyan a nuestra comunidad educativa.
+gracias a empresas y profesionales que apoyan a nuestra comunidad educativa.
 </p>
 
 
@@ -855,8 +731,10 @@ Beneficios para nuestra comunidad.
 
 </div>
 
-
 </section>
+
+
+
 <section class="actividades">
 
 <h2>
@@ -868,144 +746,68 @@ Actividades CEPACOR 2026
 
 
 <div class="actividad">
-
 <h3>🎒 Bienvenido Año Escolar</h3>
-
-<p>
-Actividad de bienvenida para nuestros estudiantes
-y familias al inicio del año académico.
-</p>
-
+<p>Actividad de bienvenida para estudiantes y familias.</p>
 </div>
 
 
-
 <div class="actividad">
-
 <h3>🐰 Pascua de Resurrección</h3>
-
-<p>
-Celebración y actividad de convivencia
-para nuestra comunidad educativa.
-</p>
-
+<p>Celebración y convivencia para nuestra comunidad.</p>
 </div>
 
 
-
 <div class="actividad">
-
 <h3>🎉 Día del Estudiante</h3>
-
-<p>
-Jornada dedicada a nuestros estudiantes
-con actividades y participación escolar.
-</p>
-
+<p>Jornada dedicada a nuestros estudiantes.</p>
 </div>
 
 
-
 <div class="actividad">
-
 <h3>🥪 Colación Fría Desfile</h3>
-
-<p>
-Apoyo y organización durante actividades
-representativas del colegio.
-</p>
-
+<p>Apoyo y organización durante actividades escolares.</p>
 </div>
 
 
-
 <div class="actividad">
-
 <h3>👗 Corona Fashion Model</h3>
-
-<p>
-Evento de moda, participación y talento
-de nuestra comunidad escolar.
-</p>
-
+<p>Evento de moda, participación y talento escolar.</p>
 </div>
 
 
-
 <div class="actividad">
-
 <h3>🎪 Kermesse</h3>
-
-<p>
-Jornada familiar de encuentro,
-juegos y convivencia.
-</p>
-
+<p>Jornada familiar de encuentro y convivencia.</p>
 </div>
 
 
-
 <div class="actividad">
-
 <h3>🎲 Bingo CEPACOR</h3>
-
-<p>
-Actividad familiar para reunir
-a nuestra comunidad educativa.
-</p>
-
+<p>Actividad familiar para reunir a la comunidad.</p>
 </div>
 
 
-
 <div class="actividad">
-
 <h3>🤝 Donaciones</h3>
-
-<p>
-Aportes y apoyo a diferentes necesidades
-de nuestros estudiantes y colegio.
-</p>
-
+<p>Aportes y apoyo a necesidades del colegio.</p>
 </div>
 
 
-
 <div class="actividad">
-
 <h3>🏃 Talleres ACLES</h3>
-
-<p>
-Apoyo a actividades deportivas,
-artísticas y recreativas.
-</p>
-
+<p>Apoyo a actividades deportivas y recreativas.</p>
 </div>
 
 
-
 <div class="actividad">
-
 <h3>⚽ Educación Física</h3>
-
-<p>
-Apoyo a iniciativas relacionadas
-con la asignatura y bienestar estudiantil.
-</p>
-
+<p>Apoyo a iniciativas deportivas estudiantiles.</p>
 </div>
-
 
 
 <div class="actividad">
-
 <h3>🏥 Enfermería</h3>
-
-<p>
-Apoyo y aportes para fortalecer
-la atención de nuestros estudiantes.
-</p>
-
+<p>Apoyo para fortalecer la atención escolar.</p>
 </div>
 
 
@@ -1013,7 +815,8 @@ la atención de nuestros estudiantes.
 
 </section>
 
-</section>
+
+
 <section class="directiva">
 
 <h2>
@@ -1025,112 +828,60 @@ Nuestra Directiva CEPACOR 2026 - 2028
 
 
 <div class="miembro">
-
-<div class="foto-pendiente">
-Foto
-</div>
-
-<h3>
-Tatiana Barahona
-</h3>
-
-<p>
-Presidenta
-</p>
-
+<div class="foto-pendiente">Foto</div>
+<h3>Tatiana Barahona</h3>
+<p>Presidenta</p>
 </div>
 
 
 <div class="miembro">
-
-<div class="foto-pendiente">
-Foto
-</div>
-
-<h3>
-Paula González
-</h3>
-
-<p>
-Tesorera
-</p>
-
+<div class="foto-pendiente">Foto</div>
+<h3>Paula González</h3>
+<p>Tesorera</p>
 </div>
 
 
 <div class="miembro">
-
-<div class="foto-pendiente">
-Foto
-</div>
-
-<h3>
-Maricela Sánchez
-</h3>
-
-<p>
-Secretaria
-</p>
-
+<div class="foto-pendiente">Foto</div>
+<h3>Maricela Sánchez</h3>
+<p>Secretaria</p>
 </div>
 
 
 <div class="miembro">
-
-<div class="foto-pendiente">
-Foto
-</div>
-
-<h3>
-María Pérez
-</h3>
-
-<p>
-Directora
-</p>
-
+<div class="foto-pendiente">Foto</div>
+<h3>María Pérez</h3>
+<p>Directora</p>
 </div>
 
 
 <div class="miembro">
-
-<div class="foto-pendiente">
-Foto
-</div>
-
-<h3>
-Carolyn Salazar
-</h3>
-
-<p>
-Directora
-</p>
-
+<div class="foto-pendiente">Foto</div>
+<h3>Carolyn Salazar</h3>
+<p>Directora</p>
 </div>
 
 
 <div class="miembro">
-
-<div class="foto-pendiente">
-Foto
+<div class="foto-pendiente">Foto</div>
+<h3>Priccila Taucare</h3>
+<p>Directora</p>
 </div>
 
-<h3>
-Priccila Taucare
-</h3>
-
-<p>
-Directora
-</p>
 
 </div>
 
 </section>
+
+
+
 <footer>
 
 © 2026 CEPACOR - Centro General de Padres y Apoderados Corona School
 
 </footer>
+
+
 </body>
 
 </html>

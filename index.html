@@ -78,15 +78,16 @@ nav a{
 
     background:
     linear-gradient(
-        rgba(53,94,59,.35),
-        rgba(53,94,59,.35)
+        rgba(53,94,59,.20),
+        rgba(53,94,59,.20)
     ),
  url("imagenes/banner/banner-corona.png");
 
     background-size:cover;
     background-position:center;
+ background-repeat:no-repeat;
 
-    padding:80px 20px;
+    padding:120px 20px;
     text-align:center;
     color:white;
 }
@@ -134,9 +135,87 @@ nav a{
 
     background:white;
 
-    padding:60px;
+    padding:70px 30px;
 
     text-align:center;
+
+}
+
+
+.bienvenida h2{
+
+    color:#355E3B;
+
+    font-size:35px;
+
+    margin-bottom:20px;
+
+}
+
+
+.bienvenida p{
+
+    max-width:900px;
+
+    margin:auto;
+
+    font-size:18px;
+
+    line-height:1.7;
+
+}
+
+
+/* OBJETIVOS */
+
+.objetivos{
+
+    display:flex;
+
+    flex-direction:row;
+
+    justify-content:center;
+
+    align-items:stretch;
+
+    flex-wrap:wrap;
+
+    gap:30px;
+
+    margin-top:45px;
+
+    width:100%;
+
+}
+
+
+.objetivos div{
+
+    width:260px;
+
+    background:#f5f5f5;
+
+    padding:25px;
+
+    border-radius:15px;
+
+    box-shadow:0 5px 15px rgba(0,0,0,.12);
+
+    text-align:center;
+
+    flex:0 0 260px;
+
+}
+
+
+
+.objetivos h3{
+
+    color:#355E3B;
+
+    font-size:22px;
+
+}
 
 }
 
@@ -330,65 +409,52 @@ Hazte Socio
 
 <section class="bienvenida">
 
-    <h2>
-        Bienvenidos a CEPACOR
-    </h2>
-
+    <h2>Bienvenidos a CEPACOR</h2>
 
     <p>
-        Trabajando juntos por el bienestar de nuestros estudiantes
-        y fortaleciendo la comunidad educativa Corona School.
+        El Centro General de Padres y Apoderados del Colegio Corona School
+        trabaja para fortalecer la participación de las familias,
+        apoyar el desarrollo de nuestros estudiantes y generar iniciativas
+        que aporten al bienestar de toda nuestra comunidad educativa.
     </p>
 
+
+    <div class="objetivos">
+
+        <div>
+            <h3>🤝 Participación</h3>
+            <p>
+                Promovemos la colaboración entre familias,
+                estudiantes y colegio.
+            </p>
+        </div>
+
+
+        <div>
+            <h3>🎯 Compromiso</h3>
+            <p>
+                Desarrollamos actividades y proyectos
+                para nuestra comunidad escolar.
+            </p>
+        </div>
+
+
+        <div>
+            <h3>🌱 Comunidad</h3>
+            <p>
+                Construimos juntos un mejor ambiente
+                educativo.
+            </p>
+        </div>
+
+    </div>
+
 </section>
-
-
-
 
 <section class="tarjetas">
 
 
-    <div class="tarjeta">
-
-        <h2>🎉 Actividades</h2>
-
-        <p>
-            Kermesse, Bingo, Jeans Day, campañas solidarias
-            y muchas actividades para nuestra comunidad.
-        </p>
-
-    </div>
-
-
-
-    <div class="tarjeta">
-
-        <h2>🤝 Convenios</h2>
-
-        <p>
-            Más de 15 beneficios exclusivos para nuestros socios CEPACOR.
-        </p>
-
-    </div>
-
-
-
-    <div class="tarjeta">
-
-        <h2>👨‍👩‍👧‍👦 Comunidad</h2>
-
-        <p>
-            Trabajamos junto a las familias por el bienestar
-            de todos nuestros estudiantes.
-        </p>
-
-    </div>
-
-
-</section>
-
-
-
+    </section>
 
 
 <section class="directiva">

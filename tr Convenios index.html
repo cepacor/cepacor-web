@@ -1,0 +1,1037 @@
+[1mdiff --git a/index.html b/index.html[m
+[1mindex bcd28a8..ec5982f 100644[m
+[1m--- a/index.html[m
+[1m+++ b/index.html[m
+[36m@@ -6,470 +6,9 @@[m
+ <meta charset="UTF-8">[m
+ <meta name="viewport" content="width=device-width, initial-scale=1.0">[m
+ [m
+[31m-<title>CEPACOR - Centro General de Padres y Apoderados Corona School</title>[m
+[32m+[m[32m<title>CEPACOR | Centro General de Padres y Apoderados Corona School</title>[m
+ [m
+[31m-<style>[m
+[31m-[m
+[31m-*{[m
+[31m-    box-sizing:border-box;[m
+[31m-}[m
+[31m-[m
+[31m-body{[m
+[31m-[m
+[31m-    margin:0;[m
+[31m-    font-family:Arial, Helvetica, sans-serif;[m
+[31m-    background:#f5f5f5;[m
+[31m-    color:#333;[m
+[31m-[m
+[31m-}[m
+[31m-[m
+[31m-[m
+[31m-/* HEADER */[m
+[31m-[m
+[31m-header{[m
+[31m-[m
+[31m-    background:#355E3B;[m
+[31m-    color:white;[m
+[31m-    text-align:center;[m
+[31m-    padding:40px 20px;[m
+[31m-[m
+[31m-}[m
+[31m-[m
+[31m-[m
+[31m-.logo{[m
+[31m-[m
+[31m-    width:170px;[m
+[31m-    border-radius:10px;[m
+[31m-[m
+[31m-}[m
+[31m-[m
+[31m-[m
+[31m-h1{[m
+[31m-[m
+[31m-    font-size:42px;[m
+[31m-    margin:15px 0;[m
+[31m-[m
+[31m-}[m
+[31m-[m
+[31m-[m
+[31m-.subtitulo{[m
+[31m-[m
+[31m-    font-size:22px;[m
+[31m-[m
+[31m-}[m
+[31m-[m
+[31m-[m
+[31m-.colegio{[m
+[31m-[m
+[31m-    font-size:28px;[m
+[31m-    font-weight:bold;[m
+[31m-[m
+[31m-}[m
+[31m-[m
+[31m-[m
+[31m-.boton{[m
+[31m-[m
+[31m-    display:inline-block;[m
+[31m-    margin-top:25px;[m
+[31m-    background:#F4C430;[m
+[31m-    color:#355E3B;[m
+[31m-    padding:15px 35px;[m
+[31m-    border-radius:40px;[m
+[31m-    text-decoration:none;[m
+[31m-    font-weight:bold;[m
+[31m-[m
+[31m-}[m
+[31m-[m
+[31m-[m
+[31m-[m
+[31m-/* MENU */[m
+[31m-[m
+[31m-nav{[m
+[31m-[m
+[31m-    background:#F4C430;[m
+[31m-    padding:18px;[m
+[31m-    text-align:center;[m
+[31m-[m
+[31m-}[m
+[31m-[m
+[31m-[m
+[31m-nav a{[m
+[31m-[m
+[31m-    color:#355E3B;[m
+[31m-    text-decoration:none;[m
+[31m-    font-weight:bold;[m
+[31m-    margin:0 15px;[m
+[31m-[m
+[31m-}[m
+[31m-[m
+[31m-[m
+[31m-[m
+[31m-/* HERO */[m
+[31m-[m
+[31m-.hero{[m
+[31m-[m
+[31m-    background:[m
+[31m-    linear-gradient([m
+[31m-    rgba(53,94,59,.35),[m
+[31m-    rgba(53,94,59,.35)[m
+[31m-    ),[m
+[31m-    url("imagenes/banner/banner-corona.png");[m
+[31m-[m
+[31m-    background-size:cover;[m
+[31m-    background-position:center;[m
+[31m-[m
+[31m-    padding:120px 20px;[m
+[31m-[m
+[31m-    color:white;[m
+[31m-    text-align:center;[m
+[31m-[m
+[31m-}[m
+[31m-[m
+[31m-[m
+[31m-.hero-contenido{[m
+[31m-[m
+[31m-    max-width:900px;[m
+[31m-    margin:auto;[m
+[31m-[m
+[31m-}[m
+[31m-[m
+[31m-[m
+[31m-.hero h2{[m
+[31m-[m
+[31m-    font-size:40px;[m
+[31m-[m
+[31m-}[m
+[31m-[m
+[31m-[m
+[31m-.hero p{[m
+[31m-[m
+[31m-    font-size:20px;[m
+[31m-    line-height:1.6;[m
+[31m-[m
+[31m-}[m
+[31m-[m
+[31m-[m
+[31m-.boton-hero{[m
+[31m-[m
+[31m-    display:inline-block;[m
+[31m-    margin-top:30px;[m
+[31m-    background:#F4C430;[m
+[31m-    color:#355E3B;[m
+[31m-    padding:15px 35px;[m
+[31m-    border-radius:40px;[m
+[31m-    text-decoration:none;[m
+[31m-    font-weight:bold;[m
+[31m-[m
+[31m-}[m
+[31m-[m
+[31m-[m
+[31m-[m
+[31m-/* SECCIONES */[m
+[31m-[m
+[31m-section{[m
+[31m-[m
+[31m-    padding:70px 30px;[m
+[31m-    text-align:center;[m
+[31m-[m
+[31m-}[m
+[31m-[m
+[31m-[m
+[31m-h2{[m
+[31m-[m
+[31m-    color:#355E3B;[m
+[31m-    font-size:35px;[m
+[31m-[m
+[31m-}[m
+[31m-[m
+[31m-[m
+[31m-[m
+[31m-/* BIENVENIDA */[m
+[31m-[m
+[31m-.bienvenida{[m
+[31m-[m
+[31m-    background:white;[m
+[31m-[m
+[31m-}[m
+[31m-[m
+[31m-[m
+[31m-.bienvenida p{[m
+[31m-[m
+[31m-    max-width:900px;[m
+[31m-    margin:auto;[m
+[31m-    font-size:18px;[m
+[31m-    line-height:1.7;[m
+[31m-[m
+[31m-}[m
+[31m-[m
+[31m-[m
+[31m-[m
+[31m-/* OBJETIVOS */[m
+[31m-[m
+[31m-.objetivos{[m
+[31m-[m
+[31m-    display:flex;[m
+[31m-    justify-content:center;[m
+[31m-    flex-wrap:wrap;[m
+[31m-    gap:30px;[m
+[31m-    margin-top:45px;[m
+[31m-[m
+[31m-}[m
+[31m-[m
+[31m-[m
+[31m-.objetivo{[m
+[31m-[m
+[31m-    width:260px;[m
+[31m-    background:#f5f5f5;[m
+[31m-    padding:25px;[m
+[31m-    border-radius:15px;[m
+[31m-    box-shadow:0 5px 15px rgba(0,0,0,.12);[m
+[31m-    transition:.3s;[m
+[31m-[m
+[31m-}[m
+[31m-[m
+[31m-[m
+[31m-.objetivo:hover{[m
+[31m-[m
+[31m-    transform:translateY(-10px);[m
+[31m-[m
+[31m-}[m
+[31m-[m
+[31m-[m
+[31m-.objetivo h3{[m
+[31m-[m
+[31m-    color:#355E3B;[m
+[31m-    font-size:22px;[m
+[31m-[m
+[31m-}[m
+[31m-[m
+[31m-[m
+[31m-/* NOSOTROS */[m
+[31m-[m
+[31m-.nosotros{[m
+[31m-[m
+[31m-    background:white;[m
+[31m-[m
+[31m-}[m
+[31m-[m
+[31m-[m
+[31m-.nosotros p{[m
+[31m-[m
+[31m-    max-width:900px;[m
+[31m-    margin:15px auto;[m
+[31m-    font-size:18px;[m
+[31m-    line-height:1.7;[m
+[31m-[m
+[31m-}[m
+[31m-[m
+[31m-[m
+[31m-.nosotros-contenido{[m
+[31m-[m
+[31m-    display:flex;[m
+[31m-    justify-content:center;[m
+[31m-    flex-wrap:wrap;[m
+[31m-    gap:30px;[m
+[31m-    margin-top:40px;[m
+[31m-[m
+[31m-}[m
+[31m-[m
+[31m-[m
+[31m-.nosotros-card{[m
+[31m-[m
+[31m-    width:260px;[m
+[31m-    background:#f5f5f5;[m
+[31m-    padding:25px;[m
+[31m-    border-radius:15px;[m
+[31m-    box-shadow:0 5px 15px rgba(0,0,0,.12);[m
+[31m-[m
+[31m-}[m
+[31m-[m
+[31m-[m
+[31m-.nosotros-card h3{[m
+[31m-[m
+[31m-    color:#355E3B;[m
+[31m-[m
+[31m-}[m
+[31m-/* CONVENIOS */[m
+[31m-[m
+[31m-.convenios{[m
+[31m-[m
+[31m-    background:#f5f5f5;[m
+[31m-[m
+[31m-}[m
+[31m-[m
+[31m-[m
+[31m-.lista-convenios{[m
+[31m-[m
+[31m-    display:flex;[m
+[31m-    justify-content:center;[m
+[31m-    flex-wrap:wrap;[m
+[31m-    gap:30px;[m
+[31m-[m
+[31m-}[m
+[31m-[m
+[31m-[m
+[31m-.convenio{[m
+[31m-[m
+[31m-    width:260px;[m
+[31m-    background:white;[m
+[31m-    padding:25px;[m
+[31m-    border-radius:15px;[m
+[31m-    box-shadow:0 5px 15px rgba(0,0,0,.12);[m
+[31m-[m
+[31m-}[m
+[31m-[m
+[31m-[m
+[31m-.logo-pendiente{[m
+[31m-[m
+[31m-    width:140px;[m
+[31m-    height:100px;[m
+[31m-    margin:auto;[m
+[31m-    display:flex;[m
+[31m-    align-items:center;[m
+[31m-    justify-content:center;[m
+[31m-    background:#eeeeee;[m
+[31m-    border-radius:10px;[m
+[31m-    color:#355E3B;[m
+[31m-    font-weight:bold;[m
+[31m-[m
+[31m-}[m
+[31m-[m
+[31m-[m
+[31m-.convenio h3{[m
+[31m-[m
+[31m-    color:#355E3B;[m
+[31m-[m
+[31m-}[m
+[31m-[m
+[31m-[m
+[31m-[m
+[31m-/* ACTIVIDADES */[m
+[31m-[m
+[31m-.actividades{[m
+[31m-[m
+[31m-    background:white;[m
+[31m-[m
+[31m-}[m
+[31m-[m
+[31m-[m
+[31m-.lista-actividades{[m
+[31m-[m
+[31m-    display:flex;[m
+[31m-    justify-content:center;[m
+[31m-    flex-wrap:wrap;[m
+[31m-    gap:30px;[m
+[31m-[m
+[31m-}[m
+[31m-[m
+[31m-[m
+[31m-.actividad{[m
+[31m-[m
+[31m-    width:260px;[m
+[31m-    background:#f5f5f5;[m
+[31m-    padding:25px;[m
+[31m-    border-radius:15px;[m
+[31m-    box-shadow:0 5px 15px rgba(0,0,0,.12);[m
+[31m-[m
+[31m-}[m
+[31m-[m
+[31m-[m
+[31m-.actividad h3{[m
+[31m-[m
+[31m-    color:#355E3B;[m
+[31m-    font-size:22px;[m
+[31m-[m
+[31m-}[m
+[31m-[m
+[31m-[m
+[31m-[m
+[31m-/* DIRECTIVA */[m
+[31m-[m
+[31m-.directiva{[m
+[31m-[m
+[31m-    background:#f5f5f5;[m
+[31m-[m
+[31m-}[m
+[31m-[m
+[31m-[m
+[31m-.equipo{[m
+[31m-[m
+[31m-    display:flex;[m
+[31m-    justify-content:center;[m
+[31m-    flex-wrap:wrap;[m
+[31m-    gap:35px;[m
+[31m-[m
+[31m-}[m
+[31m-[m
+[31m-[m
+[31m-.miembro{[m
+[31m-[m
+[31m-    width:220px;[m
+[31m-[m
+[31m-}[m
+[31m-[m
+[31m-[m
+[31m-.foto-pendiente{[m
+[31m-[m
+[31m-    width:160px;[m
+[31m-    height:160px;[m
+[31m-    margin:auto;[m
+[31m-    border-radius:50%;[m
+[31m-    background:#eeeeee;[m
+[31m-    border:6px solid #F4C430;[m
+[31m-    display:flex;[m
+[31m-    align-items:center;[m
+[31m-    justify-content:center;[m
+[31m-    color:#355E3B;[m
+[31m-    font-weight:bold;[m
+[31m-[m
+[31m-}[m
+[31m-[m
+[31m-[m
+[31m-.miembro h3{[m
+[31m-[m
+[31m-    color:#355E3B;[m
+[31m-[m
+[31m-}[m
+[31m-[m
+[31m-[m
+[31m-/* FOOTER */[m
+[31m-[m
+[31m-footer{[m
+[31m-[m
+[31m-    background:#355E3B;[m
+[31m-    color:white;[m
+[31m-    text-align:center;[m
+[31m-    padding:25px;[m
+[31m-[m
+[31m-}[m
+[31m-[m
+[31m-[m
+[31m-/* RESPONSIVE */[m
+[31m-[m
+[31m-@media(max-width:700px){[m
+[31m-[m
+[31m-    h1{[m
+[31m-        font-size:32px;[m
+[31m-    }[m
+[31m-[m
+[31m-[m
+[31m-    .hero h2{[m
+[31m-[m
+[31m-        font-size:30px;[m
+[31m-[m
+[31m-    }[m
+[31m-[m
+[31m-[m
+[31m-    nav a{[m
+[31m-[m
+[31m-        display:block;[m
+[31m-        margin:10px;[m
+[31m-[m
+[31m-    }[m
+[31m-[m
+[31m-}[m
+[31m-[m
+[31m-</style>[m
+[32m+[m[32m<link rel="stylesheet" href="css/estilos.css">[m
+ [m
+ </head>[m
+ [m
+[36m@@ -479,405 +18,316 @@[m [mfooter{[m
+ [m
+ <header>[m
+ [m
+[31m-<img src="imagenes/logo-cepacor.jpeg" class="logo">[m
+[31m-[m
+[32m+[m[32m    <img src="imagenes/logo-cepacor.jpeg" class="logo">[m
+ [m
+[31m-<h1>CEPACOR</h1>[m
+[31m-[m
+[31m-[m
+[31m-<p class="subtitulo">[m
+[31m-Centro General de Padres y Apoderados[m
+[31m-</p>[m
+[31m-[m
+[31m-[m
+[31m-<p class="colegio">[m
+[31m-Corona School[m
+[31m-</p>[m
+[31m-[m
+[31m-[m
+[31m-<a href="#" class="boton">[m
+[31m-Hazte Socio[m
+[31m-</a>[m
+[32m+[m[32m    <h1>CEPACOR</h1>[m
+ [m
+[32m+[m[32m    <p>[m
+[32m+[m[32m    Centro General de Padres y Apoderados Corona School[m
+[32m+[m[32m    </p>[m
+ [m
+ </header>[m
+ [m
+ [m
+[31m-[m
+ <nav>[m
+ [m
+[31m-<a href="#">Inicio</a>[m
+[31m-<a href="#">Nosotros</a>[m
+[31m-<a href="#">Directiva</a>[m
+[31m-<a href="#">Actividades</a>[m
+[31m-<a href="#">Convenios</a>[m
+[31m-<a href="#">Galería</a>[m
+[31m-<a href="#">Contacto</a>[m
+[32m+[m[32m    <a href="#">Inicio</a>[m
+[32m+[m[32m    <a href="#">Directiva</a>[m
+[32m+[m[32m    <a href="#">Convenios</a>[m
+[32m+[m[32m    <a href="#">Actividades</a>[m
+[32m+[m[32m    <a href="#">Contacto</a>[m
+ [m
+ </nav>[m
+ [m
+ [m
+[31m-[m
+ <section class="hero">[m
+ [m
+[31m-<div class="hero-contenido">[m
+[31m-[m
+[31m-<h2>[m
+[31m-Construyendo una comunidad educativa más fuerte[m
+[31m-</h2>[m
+[31m-[m
+[31m-[m
+[31m-<p>[m
+[31m-En CEPACOR trabajamos junto a las familias y al Colegio Corona School[m
+[31m-para apoyar a nuestros estudiantes, fomentar la participación y generar[m
+[31m-beneficios para toda la comunidad educativa.[m
+[31m-</p>[m
+[32m+[m[32m   <img src="imagenes/banner/banner-corona.png" class="banner">[m
+ [m
+[32m+[m[32m    <div class="hero-texto">[m
+ [m
+[31m-<a href="#" class="boton-hero">[m
+[31m-Conoce nuestros convenios[m
+[31m-</a>[m
+[32m+[m[32m        <h2>[m
+[32m+[m[32m        Juntos construimos el futuro de nuestros estudiantes[m
+[32m+[m[32m        </h2>[m
+ [m
+[32m+[m[32m        <p>[m
+[32m+[m[32m        Trabajando junto a las familias y al Colegio Corona School.[m
+[32m+[m[32m        </p>[m
+ [m
+[31m-</div>[m
+[32m+[m[32m    </div>[m
+ [m
+ </section>[m
+[31m-[m
+[31m-[m
+[31m-[m
+ <section class="bienvenida">[m
+ [m
+[31m-<h2>[m
+[31m-Bienvenidos a CEPACOR[m
+[31m-</h2>[m
+[32m+[m[32m    <h2>Bienvenidos a CEPACOR</h2>[m
+ [m
+[32m+[m[32m    <p>[m
+[32m+[m[32m        Somos el Centro General de Padres y Apoderados del Colegio Corona School.[m
+[32m+[m[32m        Nuestro objetivo es fortalecer la participación de las familias,[m
+[32m+[m[32m        apoyar a nuestros estudiantes y generar iniciativas para toda[m
+[32m+[m[32m        la comunidad educativa.[m
+[32m+[m[32m    </p>[m
+ [m
+[31m-<p>[m
+[31m-El Centro General de Padres y Apoderados del Colegio Corona School[m
+[31m-trabaja para fortalecer la participación de las familias,[m
+[31m-apoyar el desarrollo de nuestros estudiantes y generar iniciativas[m
+[31m-que aporten al bienestar de toda nuestra comunidad educativa.[m
+[31m-</p>[m
+[32m+[m[32m</section>[m
+ [m
+ [m
+[31m-<div class="objetivos">[m
+ [m
+[32m+[m[32m<section class="equipo">[m
+ [m
+[31m-<div class="objetivo">[m
+[32m+[m[32m    <h2>Nuestra Directiva CEPACOR</h2>[m
+ [m
+[31m-<h3>🤝 Participación</h3>[m
+ [m
+[31m-<p>[m
+[31m-Promovemos la colaboración entre familias,[m
+[31m-estudiantes y colegio.[m
+[31m-</p>[m
+[32m+[m[32m    <div class="tarjetas">[m
+ [m
+[31m-</div>[m
+ [m
+[32m+[m[32m        <div class="tarjeta">[m
+ [m
+[31m-<div class="objetivo">[m
+[32m+[m[32m            <h3>👩 Presidenta</h3>[m
+ [m
+[31m-<h3>🎯 Compromiso</h3>[m
+[32m+[m[32m            <p><strong>Tatiana Barahona</strong></p>[m
+ [m
+[31m-<p>[m
+[31m-Desarrollamos actividades y proyectos[m
+[31m-para nuestra comunidad escolar.[m
+[31m-</p>[m
+[32m+[m[32m        </div>[m
+ [m
+[31m-</div>[m
+ [m
+[32m+[m[32m        <div class="tarjeta">[m
+ [m
+[31m-<div class="objetivo">[m
+[32m+[m[32m            <h3>💰 Tesorera</h3>[m
+ [m
+[31m-<h3>🌱 Comunidad</h3>[m
+[32m+[m[32m            <p><strong>Paula González De La Barrera</strong></p>[m
+ [m
+[31m-<p>[m
+[31m-Construimos juntos un mejor ambiente[m
+[31m-educativo.[m
+[31m-</p>[m
+[32m+[m[32m        </div>[m
+ [m
+[31m-</div>[m
+ [m
+[32m+[m[32m        <div class="tarjeta">[m
+ [m
+[31m-</div>[m
+[32m+[m[32m            <h3>📝 Secretaria</h3>[m
+ [m
+[31m-</section>[m
+[32m+[m[32m            <p><strong>Maricela Sanchez Tapia</strong></p>[m
+ [m
+[32m+[m[32m        </div>[m
+ [m
+ [m
+[31m-<section class="nosotros">[m
+[32m+[m[32m        <div class="tarjeta">[m
+ [m
+[31m-<h2>[m
+[31m-¿Quiénes somos?[m
+[31m-</h2>[m
+[32m+[m[32m            <h3>👩 Directora</h3>[m
+ [m
+[32m+[m[32m            <p><strong>María Pérez</strong></p>[m
+ [m
+[31m-<p>[m
+[31m-CEPACOR es el Centro General de Padres y Apoderados del Colegio Corona School,[m
+[31m-una organización que trabaja para fortalecer la participación de las familias,[m
+[31m-apoyar a nuestros estudiantes y colaborar en iniciativas que aporten al desarrollo[m
+[31m-de nuestra comunidad educativa.[m
+[31m-</p>[m
+[32m+[m[32m        </div>[m
+ [m
+ [m
+[31m-<div class="nosotros-contenido">[m
+[32m+[m[32m        <div class="tarjeta">[m
+ [m
+[32m+[m[32m            <h3>👩 Directora</h3>[m
+ [m
+[31m-<div class="nosotros-card">[m
+[32m+[m[32m            <p><strong>Carolyn Salazar</strong></p>[m
+ [m
+[31m-<h3>🎯 Misión</h3>[m
+[32m+[m[32m        </div>[m
+ [m
+[31m-<p>[m
+[31m-Promover la participación activa de las familias,[m
+[31m-generando espacios de colaboración y apoyo.[m
+[31m-</p>[m
+ [m
+[31m-</div>[m
+[32m+[m[32m        <div class="tarjeta">[m
+ [m
+[32m+[m[32m            <h3>👩 Directora</h3>[m
+ [m
+[31m-<div class="nosotros-card">[m
+[32m+[m[32m            <p><strong>Priccila Taucare</strong></p>[m
+ [m
+[31m-<h3>🌱 Visión</h3>[m
+[32m+[m[32m        </div>[m
+ [m
+[31m-<p>[m
+[31m-Ser una comunidad organizada, comprometida y cercana.[m
+[31m-</p>[m
+ [m
+[31m-</div>[m
+[32m+[m[32m    </div>[m
+ [m
+ [m
+[31m-<div class="nosotros-card">[m
+[32m+[m[32m</section>[m
+[32m+[m[32m<section class="compromiso">[m
+ [m
+[31m-<h3>🤝 Compromiso</h3>[m
+[32m+[m[32m    <h2>Nuestro Compromiso</h2>[m
+ [m
+[31m-<p>[m
+[31m-Trabajamos junto al colegio fortaleciendo nuestra comunidad.[m
+[31m-</p>[m
+[32m+[m[32m    <p>[m
+[32m+[m[32m        En CEPACOR trabajamos para representar a las familias del Colegio Corona School,[m
+[32m+[m[32m        promoviendo la participación, colaboración y proyectos que beneficien[m
+[32m+[m[32m        a nuestros estudiantes.[m
+[32m+[m[32m    </p>[m
+ [m
+[31m-</div>[m
+[32m+[m[32m</section>[m
+ [m
+ [m
+[31m-</div>[m
+ [m
+[31m-</section>[m
+ <section class="convenios">[m
+ [m
+[31m-<h2>[m
+[31m-Convenios y Beneficios CEPACOR 2026[m
+[31m-</h2>[m
+[32m+[m[32m    <h2>Nuestros Convenios</h2>[m
+ [m
+ [m
+[31m-<p>[m
+[31m-Nuestros socios pueden acceder a beneficios exclusivos[m
+[31m-gracias a empresas y profesionales que apoyan a nuestra comunidad educativa.[m
+[31m-</p>[m
+[32m+[m[32m    <div class="tarjetas">[m
+ [m
+ [m
+[31m-<div class="lista-convenios">[m
+[32m+[m[32m        <div class="tarjeta">[m
+ [m
+[32m+[m[32m            <h3>📚 Librería Nené</h3>[m
+ [m
+[31m-<div class="convenio">[m
+[32m+[m[32m            <p>[m
+[32m+[m[32m            Beneficios para familias CEPACOR.[m
+[32m+[m[32m            </p>[m
+ [m
+[31m-<div class="logo-pendiente">[m
+[31m-Logo convenio[m
+[31m-</div>[m
+[32m+[m[32m        </div>[m
+ [m
+[31m-<h3>[m
+[31m-Confecciones León[m
+[31m-</h3>[m
+ [m
+[31m-<p>[m
+[31m-Beneficios exclusivos para socios CEPACOR.[m
+[31m-</p>[m
+ [m
+[31m-</div>[m
+[32m+[m[32m        <div class="tarjeta">[m
+ [m
+[32m+[m[32m            <h3>👕 Confecciones León</h3>[m
+ [m
+[32m+[m[32m            <p>[m
+[32m+[m[32m            Convenios y apoyo para nuestra comunidad.[m
+[32m+[m[32m            </p>[m
+ [m
+[31m-<div class="convenio">[m
+[32m+[m[32m        </div>[m
+ [m
+[31m-<div class="logo-pendiente">[m
+[31m-Logo convenio[m
+[31m-</div>[m
+ [m
+[31m-<h3>[m
+[31m-Librería Nené[m
+[31m-</h3>[m
+ [m
+[31m-<p>[m
+[31m-Descuentos y apoyo escolar.[m
+[31m-</p>[m
+[32m+[m[32m        <div class="tarjeta">[m
+ [m
+[31m-</div>[m
+[32m+[m[32m            <h3>🦷 Odontología</h3>[m
+ [m
+[32m+[m[32m            <p>[m
+[32m+[m[32m            Descuentos exclusivos para socios.[m
+[32m+[m[32m            </p>[m
+ [m
+[32m+[m[32m        </div>[m
+ [m
+[31m-<div class="convenio">[m
+ [m
+[31m-<div class="logo-pendiente">[m
+[31m-Logo convenio[m
+[31m-</div>[m
+ [m
+[31m-<h3>[m
+[31m-Aguas Santa Luna[m
+[31m-</h3>[m
+[32m+[m[32m        <div class="tarjeta">[m
+ [m
+[31m-<p>[m
+[31m-Beneficios para nuestra comunidad.[m
+[31m-</p>[m
+[32m+[m[32m            <h3>💧 Aguas Santa Luna</h3>[m
+ [m
+[31m-</div>[m
+[32m+[m[32m            <p>[m
+[32m+[m[32m            Beneficios para apoderados.[m
+[32m+[m[32m            </p>[m
+ [m
+[32m+[m[32m        </div>[m
+ [m
+[31m-</div>[m
+ [m
+[31m-</section>[m
+ [m
+[32m+[m[32m        <div class="tarjeta">[m
+ [m
+[32m+[m[32m            <h3>🐶 DRQ Veterinario</h3>[m
+ [m
+[31m-<section class="actividades">[m
+[32m+[m[32m            <p>[m
+[32m+[m[32m            Convenios para nuestras familias.[m
+[32m+[m[32m            </p>[m
+ [m
+[31m-<h2>[m
+[31m-Actividades CEPACOR 2026[m
+[31m-</h2>[m
+[32m+[m[32m        </div>[m
+ [m
+ [m
+[31m-<div class="lista-actividades">[m
+ [m
+[32m+[m[32m        <div class="tarjeta">[m
+ [m
+[31m-<div class="actividad">[m
+[31m-<h3>🎒 Bienvenido Año Escolar</h3>[m
+[31m-<p>Actividad de bienvenida para estudiantes y familias.</p>[m
+[31m-</div>[m
+[32m+[m[32m            <h3>⚖️ CMC Abogados</h3>[m
+ [m
+[32m+[m[32m            <p>[m
+[32m+[m[32m            Orientación y beneficios legales.[m
+[32m+[m[32m            </p>[m
+ [m
+[31m-<div class="actividad">[m
+[31m-<h3>🐰 Pascua de Resurrección</h3>[m
+[31m-<p>Celebración y convivencia para nuestra comunidad.</p>[m
+[31m-</div>[m
+[32m+[m[32m        </div>[m
+ [m
+ [m
+[31m-<div class="actividad">[m
+[31m-<h3>🎉 Día del Estudiante</h3>[m
+[31m-<p>Jornada dedicada a nuestros estudiantes.</p>[m
+[31m-</div>[m
+[32m+[m[32m    </div>[m
+ [m
+ [m
+[31m-<div class="actividad">[m
+[31m-<h3>🥪 Colación Fría Desfile</h3>[m
+[31m-<p>Apoyo y organización durante actividades escolares.</p>[m
+[31m-</div>[m
+[32m+[m[32m</section>[m
+[32m+[m[32m<section class="actividades">[m
+ [m
+[32m+[m[32m    <h2>Actividades CEPACOR 2026</h2>[m
+ [m
+[31m-<div class="actividad">[m
+[31m-<h3>👗 Corona Fashion Model</h3>[m
+[31m-<p>Evento de moda, participación y talento escolar.</p>[m
+[31m-</div>[m
+ [m
+[32m+[m[32m    <div class="tarjetas">[m
+ [m
+[31m-<div class="actividad">[m
+[31m-<h3>🎪 Kermesse</h3>[m
+[31m-<p>Jornada familiar de encuentro y convivencia.</p>[m
+[31m-</div>[m
+ [m
+[32m+[m[32m        <div class="tarjeta">[m
+ [m
+[31m-<div class="actividad">[m
+[31m-<h3>🎲 Bingo CEPACOR</h3>[m
+[31m-<p>Actividad familiar para reunir a la comunidad.</p>[m
+[31m-</div>[m
+[32m+[m[32m            <h3>🎒 Actividades Estudiantiles</h3>[m
+ [m
+[32m+[m[32m            <p>[m
+[32m+[m[32m            Apoyo y participación en actividades[m
+[32m+[m[32m            para nuestros estudiantes.[m
+[32m+[m[32m            </p>[m
+ [m
+[31m-<div class="actividad">[m
+[31m-<h3>🤝 Donaciones</h3>[m
+[31m-<p>Aportes y apoyo a necesidades del colegio.</p>[m
+[31m-</div>[m
+[32m+[m[32m        </div>[m
+ [m
+ [m
+[31m-<div class="actividad">[m
+[31m-<h3>🏃 Talleres ACLES</h3>[m
+[31m-<p>Apoyo a actividades deportivas y recreativas.</p>[m
+[31m-</div>[m
+ [m
+[32m+[m[32m        <div class="tarjeta">[m
+ [m
+[31m-<div class="actividad">[m
+[31m-<h3>⚽ Educación Física</h3>[m
+[31m-<p>Apoyo a iniciativas deportivas estudiantiles.</p>[m
+[31m-</div>[m
+[32m+[m[32m            <h3>🎉 Eventos CEPACOR</h3>[m
+ [m
+[32m+[m[32m            <p>[m
+[32m+[m[32m            Jornadas de convivencia, celebraciones[m
+[32m+[m[32m            y encuentros familiares.[m
+[32m+[m[32m            </p>[m
+ [m
+[31m-<div class="actividad">[m
+[31m-<h3>🏥 Enfermería</h3>[m
+[31m-<p>Apoyo para fortalecer la atención escolar.</p>[m
+[31m-</div>[m
+[32m+[m[32m        </div>[m
+ [m
+ [m
+[31m-</div>[m
+ [m
+[31m-</section>[m
+[32m+[m[32m        <div class="tarjeta">[m
+ [m
+[32m+[m[32m            <h3>🤝 Campañas Solidarias</h3>[m
+ [m
+[32m+[m[32m            <p>[m
+[32m+[m[32m            Acciones de apoyo para nuestra[m
+[32m+[m[32m            comunidad educativa.[m
+[32m+[m[32m            </p>[m
+ [m
+[31m-<section class="directiva">[m
+[32m+[m[32m        </div>[m
+ [m
+[31m-<h2>[m
+[31m-Nuestra Directiva CEPACOR 2026 - 2028[m
+[31m-</h2>[m
+ [m
+[32m+[m[32m    </div>[m
+ [m
+[31m-<div class="equipo">[m
+ [m
+[32m+[m[32m</section>[m
+ [m
+[31m-<div class="miembro">[m
+[31m-<div class="foto-pendiente">Foto</div>[m
+[31m-<h3>Tatiana Barahona</h3>[m
+[31m-<p>Presidenta</p>[m
+[31m-</div>[m
+[32m+[m[32m<section class="contacto">[m
+ [m
+[32m+[m[32m    <h2>Contacto CEPACOR</h2>[m
+ [m
+[31m-<div class="miembro">[m
+[31m-<div class="foto-pendiente">Foto</div>[m
+[31m-<h3>Paula González</h3>[m
+[31m-<p>Tesorera</p>[m
+[31m-</div>[m
+[32m+[m[32m    <div class="tarjetas">[m
+ [m
+[32m+[m[32m        <div class="tarjeta">[m
+ [m
+[31m-<div class="miembro">[m
+[31m-<div class="foto-pendiente">Foto</div>[m
+[31m-<h3>Maricela Sánchez</h3>[m
+[31m-<p>Secretaria</p>[m
+[31m-</div>[m
+[32m+[m[32m            <h3>📧 Correos</h3>[m
+ [m
+[32m+[m[32m            <p>cepacoriqq@gmail.com</p>[m
+[32m+[m[32m            <p>cepacor@coronaschool.cl</p>[m
+ [m
+[31m-<div class="miembro">[m
+[31m-<div class="foto-pendiente">Foto</div>[m
+[31m-<h3>María Pérez</h3>[m
+[31m-<p>Directora</p>[m
+[31m-</div>[m
+[32m+[m[32m        </div>[m
+ [m
+[32m+[m[32m        <div class="tarjeta">[m
+ [m
+[31m-<div class="miembro">[m
+[31m-<div class="foto-pendiente">Foto</div>[m
+[31m-<h3>Carolyn Salazar</h3>[m
+[31m-<p>Directora</p>[m
+[31m-</div>[m
+[32m+[m[32m            <h3>🏫 Institución</h3>[m
+ [m
+[32m+[m[32m            <p>Centro General de Padres y Apoderados</p>[m
+[32m+[m[32m            <p>Colegio Corona School</p>[m
+ [m
+[31m-<div class="miembro">[m
+[31m-<div class="foto-pendiente">Foto</div>[m
+[31m-<h3>Priccila Taucare</h3>[m
+[31m-<p>Directora</p>[m
+[31m-</div>[m
+[32m+[m[32m        </div>[m
+ [m
+[32m+[m[32m        <div class="tarjeta">[m
+ [m
+[31m-</div>[m
+[32m+[m[32m            <h3>📍 Síguenos</h3>[m
+ [m
+[31m-</section>[m
+[32m+[m[32m            <p>Instagram</p>[m
+[32m+[m[32m            <p>@cepacor_coronaschool</p>[m
+[32m+[m
+[32m+[m[32m        </div>[m
+ [m
+[32m+[m[32m    </div>[m
+ [m
+[32m+[m[32m</section>[m
+ [m
+ <footer>[m
+ [m
+[31m-© 2026 CEPACOR - Centro General de Padres y Apoderados Corona School[m
+[32m+[m[32m    <p>[m
+[32m+[m[32m    © 2026 CEPACOR - Centro General de Padres y Apoderados Corona School[m
+[32m+[m[32m    </p>[m
+ [m
+ </footer>[m
+ [m

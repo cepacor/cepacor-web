@@ -156,7 +156,7 @@ nav a:hover{
     box-shadow:0 5px 15px rgba(0,0,0,.15);
     text-align:center;
     transition:.3s;
-
+    overflow-wrap: break-word;
 }
 
 .tarjeta:hover{
@@ -177,6 +177,20 @@ nav a:hover{
     color:#555;
     line-height:1.6;
 
+}
+.tarjeta a{
+    color:#355E3B;
+    text-decoration:none;
+    font-weight:bold;
+}
+
+.tarjeta a:hover{
+    color:#F4C430;
+}
+
+.instagram{
+    text-align:center;
+    margin-top:15px;
 }
 
 /* ==========================================

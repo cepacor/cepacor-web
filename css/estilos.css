@@ -137,19 +137,18 @@ nav a:hover{
 ========================================== */
 
 .tarjetas{
-
     display:grid;
-    grid-template-columns:repeat(3,250px);
+    grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
     justify-content:center;
     gap:30px;
     margin-top:40px;
-
 }
 
 .tarjeta{
 
     background:white;
-    width:250px;
+    .tarjeta{
+    width:100%;
     min-height:180px;
     padding:25px;
     border-radius:15px;

@@ -196,14 +196,13 @@ nav a:hover{
 
 .tarjeta{
 
-    background:#f3f8f3;
-    border:1px solid #c9dbc9;
-    border-top:5px solid #355E3B;
+    background:linear-gradient(145deg,#ffffff,#eef5ee);
     width:100%;
-    min-height:180px;
+    min-height:220px;
     padding:25px;
-    border-radius:15px;
-    box-shadow:0 5px 15px rgba(0,0,0,.15);
+    border-radius:18px;
+    border:2px solid rgba(53,94,59,0.15);
+    box-shadow:0 8px 20px rgba(0,0,0,.12);
     text-align:center;
     transition:.3s;
     overflow-wrap:break-word;

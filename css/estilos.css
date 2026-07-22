@@ -1098,3 +1098,47 @@ footer{
     }
 
 }
+.hazte-socio{
+
+    background:#355E3B;
+    color:white;
+    text-align:center;
+    padding:60px 20px;
+
+}
+
+.hazte-socio h2{
+
+    color:white;
+    margin-bottom:20px;
+
+}
+
+.hazte-socio p{
+
+    max-width:700px;
+    margin:auto auto 30px;
+    font-size:18px;
+
+}
+
+.btn-socio{
+
+    display:inline-block;
+    background:#25D366;
+    color:white;
+    padding:18px 35px;
+    border-radius:40px;
+    text-decoration:none;
+    font-size:22px;
+    font-weight:bold;
+    transition:.3s;
+
+}
+
+.btn-socio:hover{
+
+    background:#1fa851;
+    transform:translateY(-4px);
+
+}

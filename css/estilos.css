@@ -1403,12 +1403,17 @@ footer{
 }
 /* ANCHO DATOS ESTUDIANTES */
 
-.bloque-formulario.estudiantes{
+/* ANCHO DATOS ESTUDIANTES */
 
-    width:75%;
-    max-width:850px;
+#fichaSocio .bloque-formulario.estudiantes{
+
+    width:75% !important;
+    max-width:850px !important;
+    margin:30px auto !important;
 
 }
+
+
 /* BOTON ENVIAR FICHA */
 
 .boton-enviar{
@@ -1447,5 +1452,268 @@ footer{
     color:#355E3B;
 
     transform:translateY(-4px);
+
+}
+/* Caja información de pago CEPACOR */
+
+.info-pago {
+
+    background: #eef5ee;
+    border-left: 6px solid #355E3B;
+    border-top: 2px solid #F4C430;
+    border-radius: 10px;
+    padding: 20px;
+    margin: 25px 0;
+
+}
+
+
+.info-pago h3 {
+
+    background: #355E3B;
+    color: white;
+    padding: 10px;
+    border-radius: 8px;
+    text-align: center;
+
+}
+
+
+.info-pago p {
+
+    color: #333;
+    font-size: 15px;
+
+}
+
+
+.info-pago .nota {
+
+    background: #fff8dc;
+    border: 1px solid #F4C430;
+    padding: 12px;
+    border-radius: 8px;
+    font-size: 14px;
+
+}
+/* Datos bancarios CEPACOR */
+
+.datos-transferencia {
+
+    background: #f5f8f2;
+    border: 2px solid #355E3B;
+    border-left: 8px solid #F4C430;
+    border-radius: 12px;
+    padding: 20px;
+    margin: 20px 0;
+
+}
+
+
+.datos-transferencia h3 {
+
+    background: #355E3B;
+    color: white;
+    text-align: center;
+    padding: 12px;
+    border-radius: 8px;
+    margin-bottom: 15px;
+
+}
+
+
+.datos-transferencia p {
+
+    margin: 8px 0;
+    font-size: 16px;
+    color: #333;
+
+}
+
+
+.datos-transferencia strong {
+
+    color: #355E3B;
+
+}
+/* =====================================
+   TARJETAS FORMULARIO SOCIOS CEPACOR
+===================================== */
+
+.tarjeta-formulario {
+
+    background: #f5f8f2;
+    border: 2px solid #355E3B;
+    border-radius: 12px;
+    padding: 22px;
+    margin: 25px 0;
+    box-shadow: 0 3px 8px rgba(0,0,0,0.08);
+
+}
+
+
+.tarjeta-formulario h3 {
+
+    background: #355E3B;
+    color: white;
+    padding: 12px;
+    text-align: center;
+    border-radius: 8px;
+    margin-bottom: 20px;
+
+}
+
+
+.tarjeta-formulario label {
+
+    font-weight: bold;
+    color: #355E3B;
+
+}
+
+
+.tarjeta-formulario input,
+.tarjeta-formulario select,
+.tarjeta-formulario textarea {
+
+    background: white;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    padding: 10px;
+    width: 100%;
+
+}
+/* ==========================================
+   ESTILO GENERAL CUADROS FICHA SOCIOS CEPACOR
+========================================== */
+
+.seccion-formulario,
+.info-pago,
+.datos-transferencia {
+
+    background: #eef5ee;       /* Fondo verde suave */
+    border: 2px solid #355E3B; /* Borde verde CEPACOR */
+    border-left: 8px solid #F4C430; /* Línea amarilla */
+    border-radius: 12px;
+    padding: 22px;
+    margin: 25px 0;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.10);
+
+}
+
+
+/* Títulos de cada cuadro */
+
+.seccion-formulario h3,
+.info-pago h3,
+.datos-transferencia h3 {
+
+    background: #355E3B;
+    color: white;
+    text-align: center;
+    padding: 12px;
+    border-radius: 8px;
+    margin-bottom: 18px;
+
+}
+
+
+/* Etiquetas */
+
+.seccion-formulario label,
+.info-pago label,
+.datos-transferencia label {
+
+    color: #355E3B;
+    font-weight: bold;
+
+}
+
+
+/* Campos de ingreso */
+
+.seccion-formulario input,
+.seccion-formulario select,
+.seccion-formulario textarea,
+.info-pago input,
+.info-pago select {
+
+    background: white;
+    border: 1px solid #bbb;
+    border-radius: 6px;
+    padding: 10px;
+
+}
+
+
+/* Avisos importantes */
+
+.nota {
+
+    background: #fff8dc;
+    border: 1px solid #F4C430;
+    padding: 12px;
+    border-radius: 8px;
+
+}
+/* ==========================================
+   RESPONSIVE FICHA SOCIOS CEPACOR
+   CELULARES Y TABLETS
+========================================== */
+
+@media (max-width: 768px) {
+
+
+    .bloque-formulario,
+    .datos-transferencia {
+
+        width: 100%;
+        padding: 15px !important;
+        margin: 15px 0 !important;
+
+    }
+
+
+    .bloque-formulario h3,
+    .datos-transferencia h3 {
+
+        font-size: 18px;
+        padding: 10px;
+
+    }
+
+
+    .grupo-input {
+
+        display: block !important;
+        width: 100%;
+
+    }
+
+
+    input,
+    select,
+    textarea {
+
+        width: 100% !important;
+        font-size: 16px;
+
+    }
+
+
+    .boton-enviar,
+    .boton-imprimir {
+
+        width: 100%;
+        margin-top: 10px;
+
+    }
+
+
+    body {
+
+        overflow-x: hidden;
+
+    }
 
 }

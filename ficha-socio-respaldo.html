@@ -1,6 +1,8 @@
 <!DOCTYPE html>
 <html lang="es">
 
+<link rel="stylesheet" href="socio.css">
+
 <head>
 
     <meta charset="UTF-8">
@@ -467,29 +469,28 @@
     </p>
 
 
+   
     <div class="campo">
 
-        <label>Forma de pago</label>
+     <select name="forma_pago">
+        <option value="">Seleccione</option>
+        <option value="Transferencia bancaria">Transferencia bancaria</option>
+        <option value="Pago presencial con directiva CEPACOR">Pago presencial con directiva CEPACOR</option>
+    </select>
 
-        <select>
-            <option value="">Seleccione</option>
-            <option>Transferencia bancaria</option>
-            <option>Pago presencial con directiva CEPACOR</option>
-        </select>
-
-    </div>
+</div>
 
 
     <div class="campo">
 
-        <label>
-            Nombre de la persona que realizó el pago
-        </label>
+       <label>
+    Nombre de la persona que realizó el pago
+</label>
 
-        <input 
-        type="text"
-        placeholder="Nombre completo">
-
+<input 
+type="text"
+name="nombre_pagador"
+placeholder="Nombre completo">
     </div>
 
 
@@ -499,20 +500,19 @@
             RUT de quien realizó la transferencia
         </label>
 
-        <input 
-        type="text"
-        placeholder="Ejemplo: 12.345.678-9">
+       <input 
+type="text"
+name="rut_pagador"
+placeholder="Ejemplo: 12.345.678-9">
 
     </div>
 
 
     <div class="campo">
 
-        <label>
-            Fecha de transferencia
-        </label>
-
-        <input type="date">
+        <input 
+type="date"
+name="fecha_transferencia">
 
     </div>
 
@@ -538,11 +538,25 @@
 
 
 
-<!-- DECLARACIÓN -->
 
-<section class="bloque-formulario seccion-formulario">
+    <!-- DECLARACIÓN -->
 
-    <h3>📄 Declaración del apoderado</h3>
+<section class="declaracion" style="background:white; border:3px solid #355E3B; border-radius:15px; padding:30px; margin:30px 0;">
+    <h3 class="titulo-declaracion">
+
+        <span class="icono-declaracion">📄</span>
+
+        <span class="texto-declaracion">
+            Declaración del Apoderado
+        </span>
+
+    </h3>
+
+
+    <p>
+        Declaro haber leído y aceptado la información entregada,
+        y autorizo mi incorporación como socio CEPACOR.
+    </p>
 
 
     <p>
@@ -556,22 +570,23 @@
         y beneficios destinados a nuestros alumnos y comunidad educativa.
     </p>
 
+</section>
 
-    <div class="campo checkbox">
+ 
 
-        <label>
-            <input type="checkbox">
-            Declaro haber leído y aceptado la información anterior.
-        </label>
+        
 
-        </div>
+<div class="campo checkbox">
 
-  </section>
+    <label>
+        <input type="checkbox">
+        Declaro haber leído y aceptado la información anterior.
+    </label>
+
+</div>
 
 
-
-
-<button type="submit" class="boton-enviar">
+<button type="submit" class="boton-enviar" id="btnEnviar">
     🟢 Enviar inscripción
 </button>
 
@@ -580,9 +595,73 @@
     🖨️ Descargar ficha para imprimir
 </button>
 
-</form>
 
-</main>
+<script>
+
+alert("SCRIPT CARGADO");
+document.querySelector(".boton-imprimir").addEventListener("click", function(){
+
+    window.print();
+
+});
+
+const botonEnviar = document.getElementById("btnEnviar");
+
+
+document.getElementById("fichaSocio").addEventListener("submit", async function(e){
+
+    e.preventDefault();
+
+    botonEnviar.disabled = true;
+    botonEnviar.innerHTML = "⏳ Enviando inscripción...";
+
+    const datos = Object.fromEntries(new FormData(this).entries());
+
+    try {
+
+const respuesta = await fetch("https://script.google.com/macros/s/AKfycbzHaUcq1pPUSHWTgvct3tHz6i-7bwNlZkDPr_5rHyY_9zzM5YU-NIW8wInlCQ7puuR4/exec", {
+
+    method: "POST",
+
+    headers: {
+        "Content-Type": "text/plain;charset=utf-8"
+    },
+
+    body: JSON.stringify(datos)
+
+});
+
+      if(respuesta.ok){
+
+    alert("✅ Enviado correctamente");
+
+    this.reset();
+
+    botonEnviar.disabled = false;
+    botonEnviar.innerHTML = "🟢 Enviar inscripción";
+
+}else{
+
+    const texto = await respuesta.text();
+
+    botonEnviar.disabled = false;
+    botonEnviar.innerHTML = "🟢 Enviar inscripción";
+
+}
+
+} catch(error){
+
+    alert("❌ Error de conexión: " + error.message);
+
+    console.log(error);
+
+}
+
+
+});
+
+</script>
+
 
 </body>
 

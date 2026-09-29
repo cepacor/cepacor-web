@@ -1,8 +1,19 @@
 /* ==========================================
    FICHA SOCIOS CEPACOR
-   NUEVA VERSION
+   BASE LIMPIA
 ========================================== */
 
+
+/* GENERAL */
+
+body{
+    font-family: Arial, sans-serif;
+    background:#f5f5f5;
+    margin:0;
+}
+
+
+/* CABECERA */
 
 .cabecera-socio{
 
@@ -17,70 +28,65 @@
 .cabecera-socio .logo{
 
     width:160px;
-    margin:auto;
-}
 
+}
 
 
 .cabecera-socio h1{
 
-    margin-top:15px;
     font-size:28px;
+    margin:15px 0;
 
 }
 
 
+/* CONTENEDOR PRINCIPAL */
 
 .contenedor-socio{
 
-    width:90%;
-    max-width:900px;
+    width:100%;
+    max-width:1100px;
     margin:30px auto;
+    padding:0 20px;
+    box-sizing:border-box;
 
 }
 
 
+/* CUADROS GENERALES */
 
+.bloque-formulario,
 .bienvenida,
-.beneficios,
-.formulario-socio{
+.datos-transferencia,
+.info-pago,
+.declaracion{
 
     background:white;
     padding:25px;
     margin-bottom:25px;
-    border-radius:12px;
+    border-radius:15px;
     border-left:8px solid #F4C430;
-    box-shadow:0 2px 8px rgba(0,0,0,0.1);
+    box-shadow:0 3px 10px rgba(0,0,0,.10);
 
 }
 
 
-
-.formulario-socio h2,
-.bienvenida h2,
-.beneficios h2{
+h2,
+h3{
 
     color:#355E3B;
-    margin-bottom:15px;
+    text-align:center;
 
 }
 
 
-
-.beneficios ul{
-
-    padding-left:25px;
-
-}
-
-
+/* CAMPOS */
 
 .campo{
 
     margin-bottom:18px;
 
 }
-
 
 
 .campo label{
@@ -92,226 +98,407 @@
 }
 
 
-
-.campo input{
+.campo input,
+.campo select{
 
     width:100%;
     padding:12px;
     border:1px solid #ccc;
     border-radius:8px;
-    font-size:16px;
+    box-sizing:border-box;
 
 }
 
 
-
-.footer-socio{
-
-    background:#355E3B;
-    color:white;
-    text-align:center;
-    padding:15px;
-
-}
-
-
-@media(max-width:768px){
-
-
-    .contenedor-socio{
-
-        width:95%;
-        margin:20px auto;
-
-    }
-
-
-    .cabecera-socio h1{
-
-        font-size:22px;
-
-    }
-
-
-    .bienvenida,
-    .beneficios,
-    .formulario-socio{
-
-        padding:18px;
-
-    }
-
-
-}
-/* ==========================================
-   TARJETAS DEL FORMULARIO
-========================================== */
-
-.bloque-formulario{
-    background:#fff;
-    padding:25px;
-    margin-bottom:25px;
-    border-radius:12px;
-    border-left:8px solid #F4C430;
-    box-shadow:0 2px 8px rgba(0,0,0,.10);
-}
-
-.bloque-formulario h3,
-.bloque-formulario h4{
-    color:#355E3B;
-    text-align:center;
-    margin-bottom:15px;
-}
+/* GRILLA */
 
 .grupo-input{
+
     display:grid;
     grid-template-columns:repeat(2,1fr);
     gap:20px;
+
 }
 
-.campo select,
-.campo textarea{
+
+/* BOTONES */
+
+.boton-enviar,
+.boton-imprimir{
+
+    display:block;
     width:100%;
-    padding:12px;
-    border:1px solid #ccc;
-    border-radius:8px;
-    font-size:16px;
+    max-width:700px;
+
+    padding:20px;
+
+    border:none;
+    border-radius:50px;
+
+    font-size:24px;
+    font-weight:bold;
+
+    cursor:pointer;
+
+    margin:30px auto;
+
 }
+
+
+/* BOTON ENVIAR */
 
 .boton-enviar{
-    text-align:center;
-    margin:35px 0;
-}
 
-.boton-enviar button{
     background:#355E3B;
-    color:#fff;
-    border:none;
-    padding:16px 40px;
-    border-radius:40px;
-    font-size:18px;
-    cursor:pointer;
+    color:white;
+
 }
 
-.boton-enviar button:hover{
+
+.boton-enviar:hover{
+
     background:#F4C430;
     color:#355E3B;
+
 }
-@media(max-width:600px){
+
+
+/* BOTON IMPRIMIR */
+
+.boton-imprimir{
+
+    background:#F4C430;
+    color:#355E3B;
+
+}
+
+
+.boton-imprimir:hover{
+
+    background:#355E3B;
+    color:white;
+
+}/* ==========================================
+   CONFIGURACIÓN IMPRESIÓN FICHA SOCIO
+========================================== */
+
+
+@media print {
+
+
+    @page{
+
+        size:A4;
+        margin:8mm;
+
+    }
+
+
+    body{
+
+        background:white !important;
+        font-size:12px;
+
+    }
+
 
     .cabecera-socio{
-        padding:20px 10px;
+
+        padding:10px !important;
+
     }
 
 
     .cabecera-socio .logo{
-        width:120px;
+
+        width:80px !important;
+
     }
 
 
     .cabecera-socio h1{
-        font-size:22px;
+
+        font-size:18px !important;
+        margin:5px !important;
+
     }
 
 
     .contenedor-socio{
-        width:100%;
-        max-width:100%;
-        margin:15px 0;
-        padding:0 12px;
-    }
 
+        width:100% !important;
+        max-width:none !important;
+        margin:0 !important;
+        padding:0 !important;
 
-    .bienvenida,
-    .beneficios,
-    .formulario-socio{
-
-        padding:18px;
-        margin-bottom:18px;
-        border-left:5px solid #F4C430;
-
-    }
-
-
-    .formulario-socio input,
-    .formulario-socio select,
-    .formulario-socio textarea{
-
-        width:100%;
-        box-sizing:border-box;
-
-    }
-
-}
-
-
-
-@media(max-width:600px){
-
-    .grupo-input{
-        grid-template-columns:1fr;
     }
 
 
     .bloque-formulario,
-    .tarjeta-hijo,
+    .bienvenida,
     .datos-transferencia,
     .info-pago,
-    .seccion-formulario{
+    .declaracion{
 
-        width:100%;
-        max-width:100%;
-        box-sizing:border-box;
+        padding:10px !important;
+        margin:8px 0 !important;
+
+        box-shadow:none !important;
+
+        break-inside:avoid;
+        page-break-inside:avoid;
+
+    }
+
+
+    h2{
+
+        font-size:16px !important;
+        margin:5px 0 !important;
 
     }
 
 
-    .campo input,
-    .campo select,
-    .campo textarea{
+    h3{
 
-        width:100%;
-        box-sizing:border-box;
+        font-size:14px !important;
+        margin:5px 0 !important;
 
     }
 
-}/* AJUSTE ANCHO FICHA SOCIO */
 
-.contenedor-socio{
-    width:100%;
-    max-width:1100px;
-    margin:30px auto;
-    padding:0 20px;
-    box-sizing:border-box;
-}
+    h4{
+
+        font-size:12px !important;
+
+    }
+
+
+    p,
+    li,
+    label{
+
+        font-size:10px !important;
+        line-height:1.2 !important;
+
+    }
+
+
+    input,
+    select{
+
+        height:20px !important;
+        padding:3px !important;
+        font-size:10px !important;
+
+    }
+
+
+    .grupo-input{
+
+        gap:8px !important;
+
+    }
+
+
+    /* OCULTAR BOTONES AL IMPRIMIR */
+
+    .boton-enviar,
+    .boton-imprimir,
+    .checkbox{
+
+        display:none !important;
+
+    }
+
+
+}/* ==========================================
+   AJUSTE COMPACTO IMPRESIÓN
+========================================== */
+
+@media print {
+
+
+    .grupo-input{
+
+        grid-template-columns:repeat(2,1fr) !important;
+        gap:5px !important;
+
+    }
+
+
+    .bloque-formulario,
+    .bienvenida,
+    .datos-transferencia,
+    .info-pago,
+    .declaracion{
+
+        padding:8px !important;
+        margin:5px 0 !important;
+
+    }
+
+
+    .tarjeta-hijo{
+
+        padding:5px !important;
+        margin:5px 0 !important;
+
+    }
+
+
+    h2{
+
+        font-size:15px !important;
+
+    }
+
+
+    h3{
+
+        font-size:12px !important;
+
+    }
+
+
+    h4{
+
+        font-size:11px !important;
+
+    }
+
+
+    p,
+    li,
+    label{
+
+        font-size:9px !important;
+        line-height:1.1 !important;
+
+    }
+
+
+    input,
+    select{
+
+        height:18px !important;
+        padding:2px !important;
+
+    }
+
+
+}/* ==========================================
+   IGUALAR ANCHO DE TODOS LOS BLOQUES
+========================================== */
+
 
 .bloque-formulario,
-.tarjeta-hijo,
+.bienvenida,
 .datos-transferencia,
 .info-pago,
-.seccion-formulario{
+.declaracion,
+.tarjeta-hijo{
+
     width:100%;
     max-width:100%;
     box-sizing:border-box;
+
 }
+
+
+/* Campos internos */
 
 .grupo-input{
+
     width:100%;
+
 }
+
 
 .campo{
+
     width:100%;
-}
+
+}/* ==========================================
+   REDUCCIÓN SUAVE PARA IMPRESIÓN
+========================================== */
+
+@media print {
 
 
-@media(max-width:600px){
+    .bloque-formulario,
+    .bienvenida,
+    .datos-transferencia,
+    .info-pago,
+    .declaracion{
 
-    .contenedor-socio{
-        padding:0 10px;
+        padding:6px !important;
+        margin:4px 0 !important;
+
     }
 
-    .grupo-input{
-        grid-template-columns:1fr;
+
+    .tarjeta-hijo{
+
+        padding:4px !important;
+        margin:3px 0 !important;
+
     }
+
+
+    .cabecera-socio{
+
+        padding:5px !important;
+
+    }
+
+
+    .cabecera-socio .logo{
+
+        width:65px !important;
+
+    }
+
+
+    .cabecera-socio h1{
+
+        font-size:16px !important;
+
+    }
+
+
+    h2{
+
+        font-size:14px !important;
+
+    }
+
+
+    h3{
+
+        font-size:12px !important;
+
+    }
+
+
+    p,
+    li,
+    label{
+
+        font-size:9px !important;
+        line-height:1.05 !important;
+
+    }
+
+
+    input,
+    select{
+
+        height:18px !important;
+
+        padding:2px !important;
+
+    }
+
 
 }

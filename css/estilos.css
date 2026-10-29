@@ -1801,3 +1801,167 @@ footer{
     color:#333;
 
 }
+/* ==========================================
+   GALERÍA CEPACOR - FOTOS OCULTAS
+========================================== */
+
+.foto-ampliada {
+    display: none !important;
+}
+
+.foto-ampliada.activa {
+    display: block !important;
+    position: fixed;
+    z-index: 99999;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    
+    width: 90%;
+    max-width: 800px;
+    max-height: 90vh;
+    
+    padding: 25px;
+    background: white;
+    border-radius: 20px;
+    
+    box-shadow: 0 15px 50px rgba(0,0,0,0.40);
+    
+    text-align: center;
+    overflow: auto;
+}
+
+.foto-ampliada img {
+    max-width: 100%;
+    max-height: 65vh;
+    width: auto;
+    height: auto;
+    display: block;
+    margin: 0 auto 20px;
+    border-radius: 12px;
+}
+
+.foto-ampliada h3 {
+    color: #355E3B;
+    font-size: 22px;
+}
+
+.foto-ampliada button {
+    position: absolute;
+    top: 10px;
+    right: 15px;
+    
+    width: 40px;
+    height: 40px;
+    
+    border: none;
+    border-radius: 50%;
+    
+    background: #355E3B;
+    color: white;
+    
+    font-size: 22px;
+    cursor: pointer;
+}
+
+.foto-ampliada button:hover {
+    background: #F4C430;
+    color: #355E3B;
+}
+/* ===== OCULTAR FOTOS DE GALERÍA ===== */
+
+.ventana-foto {
+    display: none !important;
+}
+
+/* Mostrar solamente la foto seleccionada */
+.ventana-foto.mostrar {
+    display: block !important;
+
+    position: fixed;
+    z-index: 99999;
+
+    top: 50%;
+    left: 50%;
+
+    transform: translate(-50%, -50%);
+
+    width: 90%;
+    max-width: 800px;
+    max-height: 90vh;
+
+    padding: 25px;
+
+    background: white;
+
+    border-radius: 20px;
+
+    box-shadow: 0 15px 50px rgba(0,0,0,0.45);
+
+    text-align: center;
+
+    overflow: auto;
+}
+
+.ventana-foto img {
+    max-width: 100%;
+    max-height: 65vh;
+    width: auto;
+    height: auto;
+    display: block;
+    margin: 0 auto 20px;
+}
+
+.cerrar-foto {
+    position: absolute;
+    top: 10px;
+    right: 15px;
+
+    width: 40px;
+    height: 40px;
+
+    border: none;
+    border-radius: 50%;
+
+    background: #355E3B;
+    color: white;
+
+    font-size: 22px;
+    cursor: pointer;
+}
+
+/* GALERÍA CEPACOR: TARJETAS HORIZONTALES */
+.galeria-cuadros {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+    width: 100%;
+    margin: 20px auto;
+}
+
+.cuadro-actividad {
+    flex: 1 1 220px;
+    max-width: 260px;
+    box-sizing: border-box;
+}
+
+.cuadro-actividad img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+}
+
+/* Adaptación a celulares */
+@media (max-width: 600px) {
+    .galeria-cuadros {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .cuadro-actividad {
+        width: 100%;
+        max-width: 320px;
+    }
+}

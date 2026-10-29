@@ -1,285 +1,554 @@
 <!DOCTYPE html>
-
 <html lang="es">
 
 <head>
 
-```
 <meta charset="UTF-8">
+
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 <title>CEPACOR | Centro General de Padres y Apoderados Corona School</title>
 
 <link rel="stylesheet" href="css/estilos.css">
-```
+
+<style>
+
+/* =====================================================
+   GRÁFICO PAGOS POR CURSO
+   ===================================================== */
+
+.grafico-cursos {
+
+    width: 100%;
+    margin-top: 30px;
+    padding: 25px;
+    box-sizing: border-box;
+    background: #ffffff;
+    border-radius: 15px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.08);
+
+}
+
+.grafico-cursos h3 {
+
+    margin: 0 0 8px 0;
+    color: #355E3B;
+    font-size: 22px;
+
+}
+
+.grafico-descripcion {
+
+    margin-bottom: 20px;
+    color: #666;
+
+}
+
+.grafico-leyenda {
+
+    display: flex;
+    gap: 25px;
+    margin-bottom: 25px;
+    flex-wrap: wrap;
+
+}
+
+.grafico-leyenda span {
+
+    display: flex;
+    align-items: center;
+    gap: 7px;
+
+}
+
+.grafico-leyenda i {
+
+    width: 16px;
+    height: 16px;
+    display: inline-block;
+    border-radius: 4px;
+
+}
+
+.leyenda-alumnos {
+
+    background: #355E3B;
+
+}
+
+.leyenda-pagados {
+
+    background: #F4C430;
+
+}
+
+
+/* CADA CURSO */
+
+.grafico-cursos .curso-grafico {
+
+    display: grid !important;
+    grid-template-columns: 190px minmax(0, 1fr) !important;
+    align-items: center;
+    gap: 15px;
+    margin-bottom: 16px;
+    width: 100%;
+    box-sizing: border-box;
+
+}
+
+
+/* NOMBRE DEL CURSO */
+
+.grafico-cursos .curso-nombre {
+
+    font-weight: 600;
+    color: #333;
+    white-space: nowrap;
+
+}
+
+
+/* CONTENEDOR DE LAS DOS BARRAS */
+
+.grafico-cursos .barra-contenedor {
+
+    width: 100%;
+    display: flex !important;
+    flex-direction: column !important;
+    gap: 7px !important;
+    min-width: 0;
+
+}
+
+
+/* BARRAS */
+
+.grafico-cursos .barra {
+
+    height: 28px !important;
+    min-width: 35px;
+    box-sizing: border-box;
+    border-radius: 6px;
+    padding: 0 10px;
+    display: flex !important;
+    align-items: center;
+    justify-content: flex-start;
+    font-size: 13px;
+    font-weight: bold;
+    position: static !important;
+    flex-shrink: 0;
+
+}
+
+
+/* BARRA ALUMNOS - VERDE */
+
+.grafico-cursos .barra-alumnos {
+
+    background: #355E3B !important;
+    color: #ffffff !important;
+
+}
+
+
+/* BARRA PAGADOS - AMARILLO */
+
+.grafico-cursos .barra-pagados {
+
+    background: #F4C430 !important;
+    color: #333333 !important;
+
+}
+
+
+/* CURSO GANADOR */
+
+.grafico-cursos .curso-lider {
+
+    padding: 12px;
+    margin-left: -12px;
+    margin-right: -12px;
+    border-radius: 10px;
+    background: rgba(244, 196, 48, 0.15);
+    border: 2px solid #F4C430;
+    box-sizing: border-box;
+
+}
+
+.grafico-cursos .curso-lider .curso-nombre {
+
+    color: #355E3B;
+    font-weight: 800;
+
+}
+
+
+/* SEGUNDO Y TERCER LUGAR */
+
+.grafico-cursos .curso-premiado {
+
+    font-weight: 800;
+    color: #355E3B;
+
+}
+
+
+/* CELULAR */
+
+@media (max-width: 700px) {
+
+    .grafico-cursos {
+
+        padding: 15px;
+
+    }
+
+    .grafico-cursos .curso-grafico {
+
+        grid-template-columns: 1fr !important;
+        gap: 6px;
+        margin-bottom: 20px;
+
+    }
+
+    .grafico-cursos .curso-nombre {
+
+        font-size: 14px;
+
+    }
+
+    .grafico-cursos .barra-contenedor {
+
+        gap: 6px !important;
+
+    }
+
+    .grafico-cursos .barra {
+
+        height: 25px !important;
+        font-size: 12px;
+
+    }
+
+}
+
+</style>
 
 </head>
 
+
 <body>
+
 
 <!-- ==================== ENCABEZADO ==================== -->
 
 <header>
 
-```
-<img src="imagenes/logo-cepacor.jpeg" class="logo">
+    <img src="imagenes/logo-cepacor.jpeg" class="logo">
 
-<h1>CEPACOR</h1>
+    <h1>CEPACOR</h1>
 
-<p>
-    Centro General de Padres y Apoderados Corona School
-</p>
-```
+    <p>
+        Centro General de Padres y Apoderados Corona School
+    </p>
 
 </header>
+
+
 
 <!-- ==================== MENÚ ==================== -->
 
 <nav>
 
-```
-<a href="#inicio">Inicio</a>
+    <a href="#inicio">Inicio</a>
 
-<a href="#avisos">🚨 Avisos</a>
+    <a href="#avisos">🚨 Avisos</a>
 
-<a href="#socios">🤝 Hazte Socio</a>
+    <a href="#socios">🤝 Hazte Socio</a>
 
-<a href="#directiva">Directiva</a>
+    <a href="#directiva">Directiva</a>
 
-<a href="#dashboard">Dashboard</a>
+    <a href="#dashboard">Dashboard</a>
 
-<a href="#convenios">Convenios</a>
+    <a href="#convenios">Convenios</a>
 
-<a href="#actividades">Actividades</a>
+    <a href="#actividades">Actividades</a>
 
-<a href="#contacto">Contacto</a>
-```
+    <a href="#contacto">Contacto</a>
 
 </nav>
+
+
 
 <!-- ==================== INICIO ==================== -->
 
 <section class="banner-principal" id="inicio">
 
-```
-<img src="imagenes/banner/banner-corona.png" class="banner">
+    <img src="imagenes/banner/banner-corona.png" class="banner">
 
-<div class="hero-texto">
+    <div class="hero-texto">
 
-    <h2>
-        Juntos construimos el futuro de nuestros estudiantes
-    </h2>
+        <h2>
+            Juntos construimos el futuro de nuestros estudiantes
+        </h2>
 
-    <p>
-        Trabajando junto a las familias y al Colegio Corona School.
-    </p>
+        <p>
+            Trabajando junto a las familias y al Colegio Corona School.
+        </p>
 
-</div>
-```
+    </div>
 
 </section>
+
+
 
 <!-- ==================== AVISOS ==================== -->
 
 <section id="avisos" class="avisos-importantes">
 
-```
-<h2>🚨 Avisos Importantes</h2>
+    <h2>🚨 Avisos Importantes</h2>
 
-<div class="aviso-destacado">
+    <div class="aviso-destacado">
 
-    <h3>📢 No existen avisos vigentes</h3>
+        <h3>📢 No existen avisos vigentes</h3>
 
-    <p>
-        Actualmente no existen comunicados importantes.
-        Cuando CEPACOR publique una citación o información urgente,
-        aparecerá en este espacio.
-    </p>
+        <p>
 
-</div>
-```
+            Actualmente no existen comunicados importantes.
+
+            Cuando CEPACOR publique una citación o información urgente,
+
+            aparecerá en este espacio.
+
+        </p>
+
+    </div>
 
 </section>
+
+
 
 <!-- ==================== HAZTE SOCIO ==================== -->
 
 <section class="hazte-socio" id="socios">
 
-```
-<div class="contenedor-socio">
+    <div class="contenedor-socio">
 
-    <h2>🤝 Únete a CEPACOR</h2>
+        <h2>🤝 Únete a CEPACOR</h2>
 
-    <p class="texto-socio">
+        <p class="texto-socio">
 
-        Con una cuota anual de
-        <strong>$10.000 por familia</strong>,
-        contribuyes directamente al desarrollo de actividades,
-        beneficios, convenios y proyectos para nuestros estudiantes.
+            Con una cuota anual
 
-    </p>
+            <strong>$10.000 por familia</strong>,
+
+            contribuyes directamente al desarrollo de actividades,
+
+            beneficios, convenios y proyectos para nuestros estudiantes.
+
+        </p>
 
 
-    <div class="beneficios-socio">
 
-        <div class="beneficio">
-            ✅ Convenios exclusivos para socios.
+        <div class="beneficios-socio">
+
+            <div class="beneficio">
+
+                ✅ Convenios exclusivos para socios.
+
+            </div>
+
+            <div class="beneficio">
+
+                ✅ Actividades para nuestros estudiantes.
+
+            </div>
+
+            <div class="beneficio">
+
+                ✅ Apoyo a proyectos de la comunidad escolar.
+
+            </div>
+
+            <div class="beneficio">
+
+                ✅ Participa activamente en CEPACOR.
+
+            </div>
+
         </div>
 
-        <div class="beneficio">
-            ✅ Actividades para nuestros estudiantes.
-        </div>
 
-        <div class="beneficio">
-            ✅ Apoyo a proyectos de la comunidad escolar.
-        </div>
 
-        <div class="beneficio">
-            ✅ Participa activamente en CEPACOR.
+        <div class="botones-socio">
+
+            <a href="ficha-socio.html" class="btn-socio">
+
+                📝 Completar Ficha de Inscripción
+
+            </a>
+
+            <a href="https://wa.me/+56976140843"
+               target="_blank"
+               class="btn-whatsapp">
+
+                💬 Consultar por WhatsApp
+
+            </a>
+
         </div>
 
     </div>
-
-
-    <div class="botones-socio">
-
-        <a href="ficha-socio.html" class="btn-socio">
-            📝 Completar Ficha de Inscripción
-        </a>
-
-        <a href="https://wa.me/56XXXXXXXXX"
-           target="_blank"
-           class="btn-whatsapp">
-
-            💬 Consultar por WhatsApp
-
-        </a>
-
-    </div>
-
-</div>
-```
 
 </section>
+
+
 
 <!-- ==================== BIENVENIDA ==================== -->
 
 <section class="bienvenida">
 
-```
-<h2>Bienvenidos a CEPACOR</h2>
+    <h2>Bienvenidos a CEPACOR</h2>
 
-<p>
+    <p>
 
-    Somos el Centro General de Padres y Apoderados del Colegio Corona School.
-    Nuestro objetivo es fortalecer la participación de las familias,
-    apoyar a nuestros estudiantes y generar iniciativas para toda
-    la comunidad educativa.
+        Somos el Centro General de Padres y Apoderados del Colegio Corona School.
 
-</p>
-```
+        Nuestro objetivo es fortalecer la participación de las familias,
+
+        apoyar a nuestros estudiantes y generar iniciativas para toda
+
+        la comunidad educativa.
+
+    </p>
 
 </section>
+
+
 
 <!-- ==================== DIRECTIVA ==================== -->
 
 <section class="equipo" id="directiva">
 
-```
-<h2>Nuestra Directiva CEPACOR</h2>
+    <h2>Nuestra Directiva CEPACOR</h2>
 
 
-<div class="tarjetas">
+
+    <div class="tarjetas">
 
 
-    <div class="tarjeta">
 
-        <h3>👩 Presidenta</h3>
+        <div class="tarjeta">
 
-        <p>
-            <strong>Tatiana Barahona</strong>
-        </p>
+            <h3>👩 Presidenta</h3>
+
+            <p>
+
+                <strong>Tatiana Barahona Videla</strong>
+
+            </p>
+
+        </div>
+
+
+
+        <div class="tarjeta">
+
+            <h3>💰 Tesorera</h3>
+
+            <p>
+
+                <strong>Carolyn Salazar Urtubia</strong>
+
+            </p>
+
+        </div>
+
+
+
+        <div class="tarjeta">
+
+            <h3>📝 Secretaria</h3>
+
+            <p>
+
+                <strong>Maricela Sanchez Tapia</strong>
+
+            </p>
+
+        </div>
+
+
+
+        <div class="tarjeta">
+
+            <h3>👩 Directora</h3>
+
+            <p>
+
+                <strong>María Pérez</strong>
+
+            </p>
+
+        </div>
+
+
+
+        <div class="tarjeta">
+
+            <h3>👩 Directora</h3>
+
+            <p>
+
+                <strong>----</strong>
+
+            </p>
+
+        </div>
+
+
+
+        <div class="tarjeta">
+
+            <h3>👩 Directora</h3>
+
+            <p>
+
+                <strong>Priccila Taucare</strong>
+
+            </p>
+
+        </div>
+
+
 
     </div>
-
-
-    <div class="tarjeta">
-
-        <h3>💰 Tesorera</h3>
-
-        <p>
-            <strong>Paula González De La Barrera</strong>
-        </p>
-
-    </div>
-
-
-    <div class="tarjeta">
-
-        <h3>📝 Secretaria</h3>
-
-        <p>
-            <strong>Maricela Sanchez Tapia</strong>
-        </p>
-
-    </div>
-
-
-    <div class="tarjeta">
-
-        <h3>👩 Directora</h3>
-
-        <p>
-            <strong>María Pérez</strong>
-        </p>
-
-    </div>
-
-
-    <div class="tarjeta">
-
-        <h3>👩 Directora</h3>
-
-        <p>
-            <strong>Carolyn Salazar</strong>
-        </p>
-
-    </div>
-
-
-    <div class="tarjeta">
-
-        <h3>👩 Directora</h3>
-
-        <p>
-            <strong>Priccila Taucare</strong>
-        </p>
-
-    </div>
-
-
-</div>
-```
 
 </section>
+
+
 
 <!-- ==================== COMPROMISO ==================== -->
 
 <section class="compromiso">
 
-```
-<h2>Nuestro Compromiso</h2>
+    <h2>Nuestro Compromiso</h2>
 
-<p>
+    <p>
 
-    En CEPACOR trabajamos para representar a las familias del Colegio Corona School,
-    promoviendo la participación, colaboración y proyectos que beneficien
-    a nuestros estudiantes.
+        En CEPACOR trabajamos para representar a las familias del Colegio Corona School,
 
-</p>
-```
+        promoviendo la participación, colaboración y proyectos que beneficien
+
+        a nuestros estudiantes.
+
+    </p>
 
 </section>
+
+
+
 <!-- ==================== DASHBOARD ==================== -->
 
 <section class="dashboard" id="dashboard">
@@ -287,8 +556,11 @@
     <h2>📊 Dashboard Ejecutivo CEPACOR</h2>
 
     <p>
+
         Estado actual de socios del Centro General de Padres y Apoderados.
+
     </p>
+
 
 
     <!-- INDICADORES PRINCIPALES -->
@@ -296,1247 +568,723 @@
     <div class="dashboard-grid">
 
         <div class="dashboard-card">
+
             <span>👨‍🎓</span>
+
             <h3>754</h3>
+
             <p>Alumnos</p>
+
         </div>
 
 
         <div class="dashboard-card">
+
             <span>❤️</span>
+
             <h3>297</h3>
+
             <p>Socios Activos</p>
+
         </div>
 
 
         <div class="dashboard-card">
+
             <span>📈</span>
+
             <h3>39,4%</h3>
+
             <p>Cobertura</p>
+
         </div>
 
 
         <div class="dashboard-card">
+
             <span>🤝</span>
+
             <h3>15</h3>
+
             <p>Convenios</p>
-        </div>
-
-    </div>
-
-
-    <!-- RESUMEN EJECUTIVO -->
-
-    <div class="resumen-dashboard">
-
-        <h3>📌 Resumen de Participación</h3>
-
-        <div class="resumen-grid">
-
-            <div class="resumen-card">
-                🏆
-                <strong>Curso Líder</strong>
-                <span>1° Medio A</span>
-            </div>
-
-
-            <div class="resumen-card">
-                👥
-                <strong>Socios Activos</strong>
-                <span>297 familias</span>
-            </div>
-
-
-            <div class="resumen-card">
-                📚
-                <strong>Cursos Evaluados</strong>
-                <span>24 cursos</span>
-            </div>
-
-
-            <div class="resumen-card">
-                📈
-                <strong>Participación General</strong>
-                <span>39,4%</span>
-            </div>
 
         </div>
 
     </div>
 
 
-    <!-- ==================== GRÁFICO POR CURSO ==================== -->
 
-    <div class="grafico-cursos">
-
-        <h3>📊 Pagos por Curso</h3>
-
-        <p class="grafico-descripcion">
-            Comparación entre alumnos y pagos registrados por curso.
-        </p>
-
-
-        <div class="grafico-leyenda">
-
-            <span>
-                <i class="leyenda-alumnos"></i>
-                Alumnos
-            </span>
-
-            <span>
-                <i class="leyenda-pagados"></i>
-                Pagados
-            </span>
-
-        </div>
-
-
-        <!-- 1° BÁSICO -->
-
-        <div class="curso-grafico">
-
-            <div class="curso-nombre">1° Básico A</div>
-
-            <div class="barra-contenedor">
-
-                <div class="barra barra-alumnos" style="width:66.7%;">
-                    26
-                </div>
-
-                <div class="barra barra-pagados" style="width:46.2%;">
-                    18
-                </div>
-
-            </div>
-
-        </div>
-
-
-        <div class="curso-grafico">
-
-            <div class="curso-nombre">1° Básico B</div>
-
-            <div class="barra-contenedor">
-
-                <div class="barra barra-alumnos" style="width:69.2%;">
-                    27
-                </div>
-
-                <div class="barra barra-pagados" style="width:20.5%;">
-                    8
-                </div>
-
-            </div>
-
-        </div>
-
-
-        <!-- 2° BÁSICO -->
-
-        <div class="curso-grafico">
-
-            <div class="curso-nombre">2° Básico A</div>
-
-            <div class="barra-contenedor">
-
-                <div class="barra barra-alumnos" style="width:74.4%;">
-                    29
-                </div>
-
-                <div class="barra barra-pagados" style="width:20.5%;">
-                    8
-                </div>
-
-            </div>
-
-        </div>
-
-
-        <div class="curso-grafico">
-
-            <div class="curso-nombre">2° Básico B</div>
-
-            <div class="barra-contenedor">
-
-                <div class="barra barra-alumnos" style="width:71.8%;">
-                    28
-                </div>
-
-                <div class="barra barra-pagados" style="width:25.6%;">
-                    10
-                </div>
-
-            </div>
-
-        </div>
-
-
-        <!-- 3° BÁSICO -->
-
-        <div class="curso-grafico">
-
-            <div class="curso-nombre">3° Básico A</div>
-
-            <div class="barra-contenedor">
-
-                <div class="barra barra-alumnos" style="width:69.2%;">
-                    27
-                </div>
-
-                <div class="barra barra-pagados" style="width:25.6%;">
-                    10
-                </div>
-
-            </div>
-
-        </div>
-
-
-        <div class="curso-grafico">
-
-            <div class="curso-nombre">3° Básico B</div>
-
-            <div class="barra-contenedor">
-
-                <div class="barra barra-alumnos" style="width:74.4%;">
-                    29
-                </div>
-
-                <div class="barra barra-pagados" style="width:33.3%;">
-                    13
-                </div>
-
-            </div>
-
-        </div>
-
-
-        <!-- 4° BÁSICO -->
-
-        <div class="curso-grafico">
-
-            <div class="curso-nombre">4° Básico A</div>
-
-            <div class="barra-contenedor">
-
-                <div class="barra barra-alumnos" style="width:74.4%;">
-                    29
-                </div>
-
-                <div class="barra barra-pagados" style="width:46.2%;">
-                    18
-                </div>
-
-            </div>
-
-        </div>
-
-
-        <div class="curso-grafico">
-
-            <div class="curso-nombre">4° Básico B</div>
-
-            <div class="barra-contenedor">
-
-                <div class="barra barra-alumnos" style="width:74.4%;">
-                    29
-                </div>
-
-                <div class="barra barra-pagados" style="width:5.1%;">
-                    2
-                </div>
-
-            </div>
-
-        </div>
-
-
-        <!-- 5° BÁSICO -->
-
-        <div class="curso-grafico">
-
-            <div class="curso-nombre">5° Básico A</div>
-
-            <div class="barra-contenedor">
-
-                <div class="barra barra-alumnos" style="width:74.4%;">
-                    29
-                </div>
-
-                <div class="barra barra-pagados" style="width:20.5%;">
-                    8
-                </div>
-
-            </div>
-
-        </div>
-
-
-        <div class="curso-grafico">
-
-            <div class="curso-nombre">5° Básico B</div>
-
-            <div class="barra-contenedor">
-
-                <div class="barra barra-alumnos" style="width:74.4%;">
-                    29
-                </div>
-
-                <div class="barra barra-pagados" style="width:15.4%;">
-                    6
-                </div>
-
-            </div>
-
-        </div>
-
-
-        <!-- 6° BÁSICO -->
-
-        <div class="curso-grafico">
-
-            <div class="curso-nombre">6° Básico A</div>
-
-            <div class="barra-contenedor">
-
-                <div class="barra barra-alumnos" style="width:74.4%;">
-                    29
-                </div>
-
-                <div class="barra barra-pagados" style="width:17.9%;">
-                    7
-                </div>
-
-            </div>
-
-        </div>
-
-
-        <div class="curso-grafico">
-
-            <div class="curso-nombre">6° Básico B</div>
-
-            <div class="barra-contenedor">
-
-                <div class="barra barra-alumnos" style="width:74.4%;">
-                    29
-                </div>
-
-                <div class="barra barra-pagados" style="width:35.9%;">
-                    14
-                </div>
-
-            </div>
-
-        </div>
-
-
-        <!-- 7° BÁSICO -->
-
-        <div class="curso-grafico">
-
-            <div class="curso-nombre">7° Básico A</div>
-
-            <div class="barra-contenedor">
-
-                <div class="barra barra-alumnos" style="width:74.4%;">
-                    29
-                </div>
-
-                <div class="barra barra-pagados" style="width:35.9%;">
-                    14
-                </div>
-
-            </div>
-
-        </div>
-
-
-        <div class="curso-grafico">
-
-            <div class="curso-nombre">7° Básico B</div>
-
-            <div class="barra-contenedor">
-
-                <div class="barra barra-alumnos" style="width:74.4%;">
-                    29
-                </div>
-
-                <div class="barra barra-pagados" style="width:20.5%;">
-                    8
-                </div>
-
-            </div>
-
-        </div>
-
-
-        <!-- 8° BÁSICO -->
-
-        <div class="curso-grafico">
-
-            <div class="curso-nombre">8° Básico A</div>
-
-            <div class="barra-contenedor">
-
-                <div class="barra barra-alumnos" style="width:74.4%;">
-                    29
-                </div>
-
-                <div class="barra barra-pagados" style="width:33.3%;">
-                    13
-                </div>
-
-            </div>
-
-        </div>
-
-
-        <div class="curso-grafico">
-
-            <div class="curso-nombre">8° Básico B</div>
-
-            <div class="barra-contenedor">
-
-                <div class="barra barra-alumnos" style="width:76.9%;">
-                    30
-                </div>
-
-                <div class="barra barra-pagados" style="width:15.4%;">
-                    6
-                </div>
-
-            </div>
-
-        </div>
-
-
-        <!-- 1° MEDIO -->
-
-        <div class="curso-grafico curso-lider">
-
-            <div class="curso-nombre">🏆 1° Medio A</div>
-
-            <div class="barra-contenedor">
-
-                <div class="barra barra-alumnos" style="width:97.4%;">
-                    38
-                </div>
-
-                <div class="barra barra-pagados" style="width:97.4%;">
-                    38
-                </div>
-
-            </div>
-
-        </div>
-
-
-        <div class="curso-grafico">
-
-            <div class="curso-nombre">1° Medio B</div>
-
-            <div class="barra-contenedor">
-
-                <div class="barra barra-alumnos" style="width:76.9%;">
-                    30
-                </div>
-
-                <div class="barra barra-pagados" style="width:28.2%;">
-                    11
-                </div>
-
-            </div>
-
-        </div>
-
-
-        <!-- 2° MEDIO -->
-
-        <div class="curso-grafico">
-
-            <div class="curso-nombre">2° Medio A</div>
-
-            <div class="barra-contenedor">
-
-                <div class="barra barra-alumnos" style="width:97.4%;">
-                    38
-                </div>
-
-                <div class="barra barra-pagados" style="width:38.5%;">
-                    15
-                </div>
-
-            </div>
-
-        </div>
-
-
-        <div class="curso-grafico">
-
-            <div class="curso-nombre">2° Medio B</div>
-
-            <div class="barra-contenedor">
-
-                <div class="barra barra-alumnos" style="width:97.4%;">
-                    38
-                </div>
-
-                <div class="barra barra-pagados" style="width:35.9%;">
-                    14
-                </div>
-
-            </div>
-
-        </div>
-
-
-        <!-- 3° MEDIO -->
-
-        <div class="curso-grafico">
-
-            <div class="curso-nombre">3° Medio A</div>
-
-            <div class="barra-contenedor">
-
-                <div class="barra barra-alumnos" style="width:97.4%;">
-                    38
-                </div>
-
-                <div class="barra barra-pagados" style="width:46.2%;">
-                    18
-                </div>
-
-            </div>
-
-        </div>
-
-
-        <div class="curso-grafico">
-
-            <div class="curso-nombre">3° Medio B</div>
-
-            <div class="barra-contenedor">
-
-                <div class="barra barra-alumnos" style="width:97.4%;">
-                    38
-                </div>
-
-                <div class="barra barra-pagados" style="width:43.6%;">
-                    17
-                </div>
-
-            </div>
-
-        </div>
-
-
-        <!-- 4° MEDIO -->
-
-        <div class="curso-grafico">
-
-            <div class="curso-nombre">4° Medio A</div>
-
-            <div class="barra-contenedor">
-
-                <div class="barra barra-alumnos" style="width:97.4%;">
-                    38
-                </div>
-
-                <div class="barra barra-pagados" style="width:35.9%;">
-                    14
-                </div>
-
-            </div>
-
-        </div>
-
-
-        <div class="curso-grafico">
-
-            <div class="curso-nombre">4° Medio B</div>
-
-            <div class="barra-contenedor">
-
-                <div class="barra barra-alumnos" style="width:100%;">
-                    39
-                </div>
-
-                <div class="barra barra-pagados" style="width:17.9%;">
-                    7
-                </div>
-
-            </div>
-
-        </div>
-
-    </div>
-
-</section>
-
-<!-- ==================== CONVENIOS ==================== -->
+   <!-- ==================== CONVENIOS ==================== -->
 
 <section class="convenios" id="convenios">
 
-```
-<h2>Nuestros Convenios</h2>
+    <h2>Nuestros Convenios</h2>
 
-<p>
+    <p>
 
-    Beneficios exclusivos para socios CEPACOR.
-    Presentando su credencial vigente podrá acceder
-    a descuentos y beneficios.
+        Beneficios exclusivos para socios CEPACOR.
 
-</p>
+        Presentando su credencial vigente podrá acceder
 
+        a descuentos y beneficios.
 
-<div class="tarjetas">
+    </p>
 
 
-    <!-- BANG BANG -->
 
-    <div class="tarjeta">
+    <div class="tarjetas">
 
-        <img src="imagenes/convenios/bang bang eventos.jpg"
-             class="logo-convenio">
 
-        <h3>🎉 Bang Bang Eventos</h3>
 
-        <p>
-            15% de descuento en eventos.
-        </p>
+        <!-- BANG BANG -->
 
-        <p class="instagram">
+        <div class="tarjeta">
 
-            📷 Instagram<br>
+            <img src="imagenes/convenios/bang bang eventos.jpg"
+                 class="logo-convenio">
 
-            <a href="https://www.instagram.com/bangbang.eventos/"
-               target="_blank">
+            <h3>🎉 Bang Bang Eventos</h3>
 
-                @bangbang.eventos
+            <p>
 
-            </a>
+                15% de descuento en eventos.
 
-        </p>
+            </p>
 
-    </div>
+            <p class="instagram">
 
+                📷 Instagram<br>
 
-    <!-- TEVY -->
+                <a href="https://www.instagram.com/bangbang.eventos/"
+                   target="_blank">
 
-    <div class="tarjeta">
+                    @bangbang.eventos
 
-        <img src="imagenes/convenios/Tevy_travel_alianzas.jpg"
-             class="logo-convenio">
+                </a>
 
-        <h3>✈️ Tevy Travel</h3>
+            </p>
 
-        <p>
-            5% de descuento en servicios.
-        </p>
+        </div>
 
-        <p class="instagram">
 
-            📷 Instagram<br>
 
-            <a href="https://www.instagram.com/tevy.giras/"
-               target="_blank">
+                      <!-- LIBRERÍA NENÉ -->
 
-                @tevy.giras
+        <div class="tarjeta">
 
-            </a>
+            <img src="imagenes/convenios/liberia nene vivar.jpg"
+                 class="logo-convenio">
 
-        </p>
+            <h3>📚 Librería Nené</h3>
 
-    </div>
+            <p>
 
+                10% de descuento para socios CEPACOR.
 
-    <!-- ORAL WHITE -->
+            </p>
 
-    <div class="tarjeta">
+            <p class="instagram">
 
-        <img src="imagenes/convenios/ORAL WHITE.jpg"
-             class="logo-convenio">
+                📷 Instagram<br>
 
-        <h3>🦷 Oral White Dental</h3>
+                <a href="https://www.instagram.com/librerias.nene/"
+                   target="_blank">
 
-        <p>
-            20% de descuento en servicios dentales.
-        </p>
+                    @librerias.nene
 
-        <p class="instagram">
+                </a>
 
-            📷 Instagram<br>
+            </p>
 
-            <a href="https://www.instagram.com/oral.whitedental/"
-               target="_blank">
+        </div>
 
-                @oral.whitedental
 
-            </a>
 
-        </p>
+        <!-- CONFECCIONES LEÓN -->
 
-    </div>
+        <div class="tarjeta">
 
+            <img src="imagenes/convenios/confecciones leon.jpg"
+                 class="logo-convenio">
 
-    <!-- LIBRERÍA NENÉ -->
+            <h3>👕 Confecciones León</h3>
 
-    <div class="tarjeta">
+            <p>
 
-        <img src="imagenes/convenios/liberia nene vivar.jpg"
-             class="logo-convenio">
+                10% a 15% de descuento.
 
-        <h3>📚 Librería Nené</h3>
+            </p>
 
-        <p>
-            10% de descuento para socios CEPACOR.
-        </p>
+            <p class="instagram">
 
-        <p class="instagram">
+                📷 Instagram<br>
 
-            📷 Instagram<br>
+                <a href="https://www.instagram.com/leonconfecciones.cl/"
+                   target="_blank">
 
-            <a href="https://www.instagram.com/librerias.nene/"
-               target="_blank">
+                    @leonconfecciones.cl
 
-                @librerias.nene
+                </a>
 
-            </a>
+            </p>
 
-        </p>
+        </div>
 
-    </div>
 
 
-    <!-- CONFECCIONES LEÓN -->
+      
+        <!-- LA PICA DEL PESCADOR -->
 
-    <div class="tarjeta">
+        <div class="tarjeta">
 
-        <img src="imagenes/convenios/confecciones leon.jpg"
-             class="logo-convenio">
+            <img src="imagenes/convenios/la pica del pescador.jpg"
+                 class="logo-convenio">
 
-        <h3>👕 Confecciones León</h3>
+            <h3>🐟 La Pica del Pescador</h3>
 
-        <p>
-            10% a 15% de descuento.
-        </p>
+            <p>
 
-        <p class="instagram">
+                Beneficios exclusivos para socios.
 
-            📷 Instagram<br>
+            </p>
 
-            <a href="https://www.instagram.com/leonconfecciones.cl/"
-               target="_blank">
+            <p class="instagram">
 
-                @leonconfecciones.cl
+                📷 Instagram<br>
 
-            </a>
+                <a href="https://www.instagram.com/lapicadelpescador/"
+                   target="_blank">
 
-        </p>
+                    @lapicadelpescador
 
-    </div>
+                </a>
 
+            </p>
 
-    <!-- AGUAS SANTA LUNA -->
+        </div>
 
-    <div class="tarjeta">
 
-        <img src="imagenes/convenios/agua santa luna.jpg"
-             class="logo-convenio">
 
-        <h3>💧 Aguas Santa Luna</h3>
+        <!-- CMC ABOGADOS -->
 
-        <p>
-            Beneficios para familias CEPACOR.
-        </p>
+        <div class="tarjeta">
 
-        <p class="instagram">
+            <img src="imagenes/convenios/cmc abogados.jpg"
+                 class="logo-convenio">
 
-            📷 Instagram<br>
+            <h3>⚖️ CMC Abogados</h3>
 
-            <a href="https://www.instagram.com/aguasantaluna/"
-               target="_blank">
+            <p>
 
-                @aguasantaluna
+                Descuentos entre 10% y 20%.
 
-            </a>
+            </p>
 
-        </p>
+            <p class="instagram">
 
-    </div>
+                🌐 Sitio Web<br>
 
+                <a href="https://cimc0511.wixsite.com/cmcabogadosasociados"
+                   target="_blank">
 
-    <!-- LA PICA DEL PESCADOR -->
+                    CMC Abogados Asociados
 
-    <div class="tarjeta">
+                </a>
 
-        <img src="imagenes/convenios/la pica del pescador.jpg"
-             class="logo-convenio">
+            </p>
 
-        <h3>🐟 La Pica del Pescador</h3>
+        </div>
 
-        <p>
-            Beneficios exclusivos para socios.
-        </p>
 
-        <p class="instagram">
 
-            📷 Instagram<br>
+        <!-- OBEPLUS -->
 
-            <a href="https://www.instagram.com/lapicadelpescador/"
-               target="_blank">
+        <div class="tarjeta">
 
-                @lapicadelpescador
+            <img src="imagenes/convenios/obeplus.jpg"
+                 class="logo-convenio">
 
-            </a>
+            <h3>🏥 OBEPLUS Medicina</h3>
 
-        </p>
+            <p>
 
-    </div>
+                Medicina general, psicología, nutrición,
 
+                terapia ocupacional y otros servicios.
 
-    <!-- CMC ABOGADOS -->
+            </p>
 
-    <div class="tarjeta">
+            <p class="instagram">
 
-        <img src="imagenes/convenios/cmc abogados.jpg"
-             class="logo-convenio">
+                📷 Instagram<br>
 
-        <h3>⚖️ CMC Abogados</h3>
+                <a href="https://www.instagram.com/obeplus.medicina/"
+                   target="_blank">
 
-        <p>
-            Descuentos entre 10% y 20%.
-        </p>
+                    @obeplus.medicina
 
-        <p class="instagram">
+                </a>
 
-            🌐 Sitio Web<br>
+            </p>
 
-            <a href="https://cimc0511.wixsite.com/cmcabogadosasociados"
-               target="_blank">
+        </div>
 
-                CMC Abogados Asociados
 
-            </a>
 
-        </p>
+        <!-- AMB -->
 
-    </div>
+        <div class="tarjeta">
 
+            <img src="imagenes/convenios/CENTRO INCLUSIVO AMB.jpg"
+                 class="logo-convenio">
 
-    <!-- OBEPLUS -->
+            <h3>🏫 AMB Servicios Educacionales</h3>
 
-    <div class="tarjeta">
+            <p>
 
-        <img src="imagenes/convenios/obeplus.jpg"
-             class="logo-convenio">
+                After School: 30% de descuento.<br>
 
-        <h3>🏥 OBEPLUS Medicina</h3>
+                Psicología, Terapia Ocupacional,
 
-        <p>
-            Medicina general, psicología, nutrición,
-            terapia ocupacional y otros servicios.
-        </p>
+                Psicopedagogía y Taller de Lectura:
 
-        <p class="instagram">
+                15% de descuento.
 
-            📷 Instagram<br>
+            </p>
 
-            <a href="https://www.instagram.com/obeplus.medicina/"
-               target="_blank">
+            <p class="instagram">
 
-                @obeplus.medicina
+                📷 Instagram<br>
 
-            </a>
+                <a href="https://www.instagram.com/centroinclusivoamb/"
+                   target="_blank">
 
-        </p>
+                    @centroinclusivoamb
 
-    </div>
+                </a>
 
+            </p>
 
-    <!-- AMB -->
+        </div>
 
-    <div class="tarjeta">
 
-        <img src="imagenes/convenios/CENTRO INCLUSIVO AMB.jpg"
-             class="logo-convenio">
 
-        <h3>🏫 AMB Servicios Educacionales</h3>
+        <!-- PODOLOGÍA -->
 
-        <p>
+        <div class="tarjeta">
 
-            After School: 30% de descuento.<br>
+            <img src="imagenes/convenios/podologia.jpeg"
+                 class="logo-convenio">
 
-            Psicología, Terapia Ocupacional,
-            Psicopedagogía y Taller de Lectura:
-            15% de descuento.
+            <h3>🦶 Podología Clínica a Domicilio</h3>
 
-        </p>
+            <p>
 
-        <p class="instagram">
+                Atención podológica a domicilio.<br>
 
-            📷 Instagram<br>
+                📞 +56 9 4564 6059
 
-            <a href="https://www.instagram.com/centroinclusivoamb/"
-               target="_blank">
+            </p>
 
-                @centroinclusivoamb
+        </div>
 
-            </a>
 
-        </p>
 
-    </div>
+        <!-- AKANA AMAUTA -->
 
+        <div class="tarjeta">
 
-    <!-- PODOLOGÍA -->
+            <img src="imagenes/convenios/centro akana amauta.jpg"
+                 class="logo-convenio">
 
-    <div class="tarjeta">
+            <h3>🌿 Centro Akana Amauta</h3>
 
-        <img src="imagenes/convenios/podologia.jpeg"
-             class="logo-convenio">
+            <p>
 
-        <h3>🦶 Podología Clínica a Domicilio</h3>
+                Convenio exclusivo para socios CEPACOR.
 
-        <p>
+            </p>
 
-            Atención podológica a domicilio.<br>
+            <p class="instagram">
 
-            📞 +56 9 4564 6059
+                📷 Instagram<br>
 
-        </p>
+                <a href="https://www.instagram.com/c.akana_amauta/"
+                   target="_blank">
 
-    </div>
+                    @c.akana_amauta
 
+                </a>
 
-    <!-- AKANA AMAUTA -->
+            </p>
 
-    <div class="tarjeta">
+        </div>
 
-        <img src="imagenes/convenios/centro akana amauta.jpg"
-             class="logo-convenio">
 
-        <h3>🌿 Centro Akana Amauta</h3>
 
-        <p>
-            Convenio exclusivo para socios CEPACOR.
-        </p>
+        <!-- TRABAJADORA SOCIAL -->
 
-        <p class="instagram">
+        <div class="tarjeta">
 
-            📷 Instagram<br>
+            <img src="imagenes/convenios/trabajadora social.jpeg"
+                 class="logo-convenio">
 
-            <a href="https://www.instagram.com/c.akana_amauta/"
-               target="_blank">
+            <h3>👩‍⚕️ Trabajadora Social</h3>
 
-                @c.akana_amauta
+            <p>
 
-            </a>
+                ⭐ 20% de descuento para socios CEPACOR.
 
-        </p>
+            </p>
 
-    </div>
+            <p class="instagram">
 
+                📱 Contacto<br>
 
-    <!-- TRABAJADORA SOCIAL -->
+                <a href="tel:+56978872950">
 
-    <div class="tarjeta">
+                    +56 9 7887 2950
 
-        <img src="imagenes/convenios/trabajadora social.jpeg"
-             class="logo-convenio">
+                </a>
 
-        <h3>👩‍⚕️ Trabajadora Social</h3>
+            </p>
 
-        <p>
-            ⭐ 20% de descuento para socios CEPACOR.
-        </p>
+        </div>
 
-        <p class="instagram">
 
-            📱 Contacto<br>
 
-            <a href="tel:+56978872950">
+        <!-- VITADEN -->
 
-                +56 9 7887 2950
+        <div class="tarjeta">
 
-            </a>
+            <img src="imagenes/convenios/clnica odonologica vitaden.jpeg"
+                 class="logo-convenio">
 
-        </p>
+            <h3>🦷 Clínica Odontológica Vitaden</h3>
 
-    </div>
+            <p>
 
+                ✅ 20% de descuento en odontología general
 
-    <!-- VITADEN -->
+                y especialidades.<br>
 
-    <div class="tarjeta">
+                ✅ Plan Sonríe
 
-        <img src="imagenes/convenios/clnica odonologica vitaden.jpeg"
-             class="logo-convenio">
+                (Limpieza dental + Fluoración):
 
-        <h3>🦷 Clínica Odontológica Vitaden</h3>
+                <strong>$55.000</strong>.<br>
 
-        <p>
+                ✅ 40% de descuento en urgencias escolares
 
-            ✅ 20% de descuento en odontología general
-            y especialidades.<br>
+                por accidente en horario escolar.<br>
 
-            ✅ Plan Sonríe
-            (Limpieza dental + Fluoración):
-            <strong>$55.000</strong>.<br>
+                ✅ Evaluación a mitad de precio.
 
-            ✅ 40% de descuento en urgencias escolares
-            por accidente en horario escolar.<br>
+            </p>
 
-            ✅ Evaluación a mitad de precio.
+            <p class="instagram">
 
-        </p>
+                📷 Instagram<br>
 
-        <p class="instagram">
+                <a href="https://www.instagram.com/clinicavd/"
+                   target="_blank">
 
-            📷 Instagram<br>
+                    @clinicavd
 
-            <a href="https://www.instagram.com/clinicavd/"
-               target="_blank">
+                </a>
 
-                @clinicavd
+            </p>
 
-            </a>
+        </div>
 
-        </p>
 
-    </div>
 
+<!-- MAURO MODEL'S -->
 
-    <!-- CRISS CHACANA -->
+<div class="tarjeta">
 
-    <div class="tarjeta">
+    <img src="imagenes/convenios/LOGO MAURO.JPG"
+         class="logo-convenio"
+         alt="Logo Mauro Model's Academia de Modelos">
 
-        <img src="imagenes/convenios/criss chacana.jpeg"
-             class="logo-convenio"
-             alt="Agencia de Modelos CRISS CHACANA">
+    <h3>✨ Mauro Model's Academia de Modelos</h3>
 
-        <h3>👠 Agencia de Modelos CRISS CHACANA</h3>
 
-        <p>
-            Convenio exclusivo para socios CEPACOR.
-        </p>
+    <p>
+        ✅ Descuento para socios CEPACOR,
+        presentando la credencial de socio vigente.
+    </p>
 
-        <p class="instagram">
-
-            📷
-
-            <a href="https://www.instagram.com/agencia_modelos_criss_chacana/"
-               target="_blank">
-
-                @agencia_modelos_criss_chacana
-
-            </a>
-
-        </p>
-
-    </div>
-
+    <p class="instagram">
+        📞 Contacto<br>
+        <a href="https://wa.me/56999059286" target="_blank">
+            +56 9 9905 9286
+        </a>
+    </p>
 
 </div>
-```
 
+
+      
 </section>
+
+
 
 <!-- ==================== ACTIVIDADES ==================== -->
 
 <section class="actividades" id="actividades">
 
-```
-<h2>Actividades CEPACOR 2026</h2>
+    <h2>Actividades CEPACOR 2026</h2>
 
 
-<div class="tarjetas">
+
+    <div class="tarjetas">
 
 
-    <div class="tarjeta">
 
-        <h3>🎒 Actividades Estudiantiles</h3>
+        <div class="tarjeta">
 
-        <p>
-            Apoyo y participación en actividades
-            para nuestros estudiantes.
-        </p>
+            <h3>🎒 Actividades Estudiantiles</h3>
+
+            <p>
+
+                Apoyo y participación en actividades
+
+                para nuestros estudiantes.
+
+            </p>
+
+        </div>
+
+
+
+        <div class="tarjeta">
+
+            <h3>🎉 Eventos CEPACOR</h3>
+
+            <p>
+
+                Jornadas de convivencia, celebraciones
+
+                y encuentros familiares.
+
+            </p>
+
+        </div>
+
+
+
+        <div class="tarjeta">
+
+            <h3>🤝 Campañas Solidarias</h3>
+
+            <p>
+
+                Acciones de apoyo para nuestra
+
+                comunidad educativa.
+
+            </p>
+
+        </div>
+
+
 
     </div>
 
 
-    <div class="tarjeta">
+<!-- ==================== GALERÍA DE ACTIVIDADES ==================== -->
 
-        <h3>🎉 Eventos CEPACOR</h3>
+<section class="actividades" id="galeria">
 
-        <p>
-            Jornadas de convivencia, celebraciones
-            y encuentros familiares.
-        </p>
+    <h2>📸 Galería de Actividades</h2>
 
-    </div>
+    <p style="text-align:center; margin-bottom:30px;">
+        Haz clic en una actividad para ver sus fotografías.
+    </p>
 
 
-    <div class="tarjeta">
+    <!-- CUADROS DE ACTIVIDADES -->
 
-        <h3>🤝 Campañas Solidarias</h3>
+    <div class="galerias-cuadros">
 
-        <p>
-            Acciones de apoyo para nuestra
-            comunidad educativa.
-        </p>
 
-    </div>
+     
+<!-- ACTIVIDAD 2 -->
 
+<div class="cuadro-actividad"
+     onclick="abrirGalerias('foto1')">
+
+    <div class="icono-actividad">🎉</div>
+
+    <h3>Actividades y Celebraciones</h3>
+
+    <p>Ver fotografías</p>
+
+</div>
+
+<!-- ACTIVIDAD 3 -->
+
+<div class="cuadro-actividad"
+     onclick="abrirGalerias('foto2')">
+
+    <div class="icono-actividad">🎁</div>
+
+    <h3>Donaciones y Aportes</h3>
+
+    <p>Ver fotografías</p>
+
+</div>
+<!-- ACTIVIDAD 4 -->
+
+<div class="cuadro-actividad"
+     onclick="abrirGalerias('foto3')">
+
+    <div class="icono-actividad">💚</div>
+
+    <h3>CEPACOR en Acción</h3>
+
+    <p>Ver fotografías</p>
+
+</div>
+<!-- ACTIVIDAD 5: GLORIAS NAVALES -->
+
+<div class="cuadro-actividad"
+     onclick="abrirGalerias('foto-glorias')">
+
+    <div class="icono-actividad">⚓</div>
+
+    <h3>Glorias Navales</h3>
+
+    <p>Ver fotografías</p>
+
+</div>
+</div>
+ 
+
+<!-- ==================== FOTOS DE LA GALERÍA ==================== -->
+
+<div id="foto-inicio" class="ventana-foto">
+
+    <button class="cerrar-foto" onclick="cerrarGalerias()">✕</button>
+
+    <img src="imagenes/galerias/foto1.jpeg"
+         alt="Inicio de Clases CEPACOR 2026">
+
+    <h3>🎒 Inicio de Clases 2026</h3>
 
 </div>
 
 
-<!-- ==================== GALERÍA ==================== -->
+<div id="foto1" class="ventana-foto">
 
-<div class="galeria-actividades">
+    <button class="cerrar-foto" onclick="cerrarGalerias()">✕</button>
 
-    <h3>📸 Galería de Actividades</h3>
+    <img src="imagenes/galerias/celebraciones/foto1.jpeg"
+         alt="Actividades y Celebraciones">
 
-
-    <div class="fotos-actividades">
-
-
-        <div class="foto-actividad">
-
-            <img src="imagenes/galeria/inicio-clases.jpg"
-                 alt="Inicio de clases CEPACOR 2026">
-
-            <p>🎒 Inicio de Clases 2026</p>
-
-        </div>
-
-
-        <div class="foto-actividad">
-
-            <img src="imagenes/galeria/foto1.jpg"
-                 alt="Actividad CEPACOR 2026">
-
-            <p>🎒 Actividades CEPACOR 2026</p>
-
-        </div>
-
-
-        <div class="foto-actividad">
-
-            <img src="imagenes/galeria/foto2.jpg"
-                 alt="Actividad CEPACOR 2026">
-
-            <p>🎒 Actividades CEPACOR 2026</p>
-
-        </div>
-
-
-        <div class="foto-actividad">
-
-            <img src="imagenes/galeria/foto3.jpg"
-                 alt="Actividad CEPACOR 2026">
-
-            <p>🎒 Actividades CEPACOR 2026</p>
-
-        </div>
-
-
-        <div class="foto-actividad">
-
-            <img src="imagenes/galeria/foto4.jpg"
-                 alt="Actividad CEPACOR 2026">
-
-            <p>🎒 Actividades CEPACOR 2026</p>
-
-        </div>
-
-
-    </div>
+    <h3>🎉 Actividades y Celebraciones</h3>
 
 </div>
-```
+
+
+<div id="foto2" class="ventana-foto">
+
+    <button class="cerrar-foto" onclick="cerrarGalerias()">✕</button>
+
+    <img src="imagenes/galerias/foto3.jpeg"
+         alt="Donaciones y Aportes">
+
+    <h3>🎁 Donaciones y Aportes</h3>
+
+</div>
+
+
+<div id="foto3" class="ventana-foto">
+
+    <button class="cerrar-foto" onclick="cerrarGalerias()">✕</button>
+
+    <img src="imagenes/galerias/foto4.jpeg"
+         alt="CEPACOR en Acción">
+
+    <h3>💚 CEPACOR en Acción</h3>
+
+</div>
+
+
+<div id="foto-glorias" class="ventana-foto">
+
+    <button class="cerrar-foto" onclick="cerrarGalerias()">✕</button>
+
+    <h3>⚓ Glorias Navales</h3>
+
+    <div class="carrusel-glorias">
+        <button class="flecha-glorias" onclick="cambiarFotoGlorias(-1)">❮</button>
+
+        <img id="imagen-glorias"
+             src="imagenes/galerias/glorias-navales/desfile%2021%20mayo.jpeg"
+             alt="Desfile de Glorias Navales">
+
+        <button class="flecha-glorias" onclick="cambiarFotoGlorias(1)">❯</button>
+    </div>
+
+    <p id="contador-glorias">1 de 2</p>
+
+</div>
+
+
+
+<!-- ==================== JAVASCRIPT GALERÍA ==================== -->
+
+<script>
+
+function abrirGalerias(id) {
+
+    document.querySelectorAll('.ventana-foto').forEach(function(foto) {
+        foto.classList.remove('mostrar');
+    });
+
+    var fotoSeleccionada = document.getElementById(id);
+
+    if (fotoSeleccionada) {
+        fotoSeleccionada.classList.add('mostrar');
+    }
+
+}
+
+function cerrarGalerias() {
+
+    document.querySelectorAll('.ventana-foto').forEach(function(foto) {
+        foto.classList.remove('mostrar');
+    });
+
+}
+
+function cambiarFotoGlorias(direccion) {
+    var imagen = document.getElementById('imagen-glorias');
+    var contador = document.getElementById('contador-glorias');
+
+   var fotos = [
+    'imagenes/galerias/glorias-navales/desfile%2021%20mayo.jpeg',
+    'imagenes/galerias/glorias-navales/GLORIAS%20NAVALES.jpeg'
+];
+
+    var indice = Number(imagen.dataset.indice || 0);
+
+    indice = (indice + direccion + fotos.length) % fotos.length;
+
+    imagen.src = fotos[indice];
+    imagen.dataset.indice = indice;
+
+    if (contador) {
+        contador.textContent = (indice + 1) + ' de ' + fotos.length;
+    }
+}
+
+</script>
 
 </section>
-
-<!-- ==================== CONTACTO ==================== -->
-
-<section class="contacto" id="contacto">
-
-```
-<h2>Contacto CEPACOR</h2>
-
-
-<div class="tarjetas">
-
-
-    <div class="tarjeta">
-
-        <h3>📧 Correos</h3>
-
-        <p>cepacoriqq@gmail.com</p>
-
-        <p>cepacor@coronaschool.cl</p>
-
-    </div>
-
-
-    <div class="tarjeta">
-
-        <h3>🏫 Institución</h3>
-
-        <p>
-            Centro General de Padres y Apoderados
-        </p>
-
-        <p>
-            Colegio Corona School
-        </p>
-
-    </div>
-
-
-    <div class="tarjeta">
-
-        <h3>📍 Síguenos</h3>
-
-        <p>Instagram</p>
-
-        <p>@cepacor_coronaschool</p>
-
-    </div>
-
-
-</div>
-```
-
 </section>
-
-<!-- ==================== PIE DE PÁGINA ==================== -->
-
-<footer>
-
-```
-<p>
-    © 2026 CEPACOR - Centro General de Padres y Apoderados Corona School
-</p>
-```
-
-</footer>
-
-<!-- ==================== BOTÓN SUBIR ==================== -->
-
-<div class="btn-arriba">
-
-```
-<a href="#inicio" title="Volver arriba">
-    ⬆
-</a>
-```
-
-</div>
 
 </body>
-
 </html>

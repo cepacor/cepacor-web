@@ -1,22 +1,18 @@
+
 <!DOCTYPE html>
 <html lang="es">
 
 <head>
-
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
     <title>Ficha de Inscripción | CEPACOR</title>
-
     <link rel="stylesheet" href="css/estilos.css">
     <link rel="stylesheet" href="css/socio.css">
-
 </head>
 
 <body>
 
 <header class="cabecera-socio">
-
     <img src="imagenes/logo-cepacor.jpeg"
          alt="Logo CEPACOR"
          class="logo">
@@ -27,559 +23,408 @@
         Centro General de Padres y Apoderados<br>
         Corona School
     </p>
-
 </header>
+
 <main class="contenedor-socio prueba-ancho">
 
 <form id="fichaSocio">
 
-<section class="bienvenida">
+    <!-- BIENVENIDA -->
+    <section class="bienvenida">
+        <h2>🤝 Hazte Socio de CEPACOR</h2>
+        <p>
+            Gracias por ser parte de nuestra comunidad.
+            Tu aporte permite desarrollar actividades, apoyar a los estudiantes,
+            fortalecer la participación de las familias y mantener los convenios
+            exclusivos para nuestros socios.
+        </p>
+    </section>
 
-    <h2>🤝 Hazte Socio de CEPACOR</h2>
+    <!-- BENEFICIOS -->
+    <section class="bloque-formulario">
+        <h3>⭐ Beneficios de ser Socio Activo</h3>
+        <p>La cuota anual corresponde a <strong>$10.000 por grupo familiar.</strong></p>
+        <ul>
+            <li>✅ Credencial de socio CEPACOR.</li>
+            <li>✅ Acceso a convenios y descuentos exclusivos.</li>
+            <li>✅ Apoyo a actividades para los estudiantes.</li>
+            <li>✅ Participación en proyectos del Centro General de Padres.</li>
+        </ul>
+    </section>
 
-    <p>
-
-        Gracias por ser parte de nuestra comunidad.
-
-        Tu aporte permite desarrollar actividades, apoyar a los estudiantes,
-        fortalecer la participación de las familias y mantener los convenios
-        exclusivos para nuestros socios.
-
-    </p>
-
-</section>
-
-<section class="bloque-formulario">
-
-    <h3>⭐ Beneficios de ser Socio Activo</h3>
-
-    <p>
-
-        La cuota anual corresponde a
-        <strong>$10.000 por grupo familiar.</strong>
-
-    </p>
-
-    <ul>
-
-        <li>✅ Credencial de socio CEPACOR.</li>
-
-        <li>✅ Acceso a convenios y descuentos exclusivos.</li>
-
-        <li>✅ Apoyo a actividades para los estudiantes.</li>
-
-        <li>✅ Participación en proyectos del Centro General de Padres.</li>
-
-    </ul>
-
-</section>
-<section class="bloque-formulario">
-
-    <h3>👤 Datos del Apoderado</h3>
-
-    <div class="grupo-input">
-
-        <div class="campo">
-            <label for="nombre_apoderado">Nombre completo *</label>
-            <input
-                type="text"
-                id="nombre_apoderado"
-                name="nombre_apoderado"
-                placeholder="Ingrese nombre completo"
-                required>
-        </div>
-
-        <div class="campo">
-            <label for="rut_apoderado">RUT *</label>
-            <input
-                type="text"
-                id="rut_apoderado"
-                name="rut_apoderado"
-                placeholder="12.345.678-9"
-                required>
-        </div>
-
-        <div class="campo">
-            <label for="telefono">Teléfono *</label>
-            <input
-                type="tel"
-                id="telefono"
-                name="telefono"
-                placeholder="+56 9 1234 5678"
-                required>
-        </div>
-
-        <div class="campo">
-            <label for="correo">Correo electrónico *</label>
-            <input
-                type="email"
-                id="correo"
-                name="correo"
-                placeholder="correo@ejemplo.cl"
-                required>
-        </div>
-
-        <div class="campo campo-completo">
-            <label for="direccion">Dirección *</label>
-            <input
-                type="text"
-                id="direccion"
-                name="direccion"
-                placeholder="Ingrese su dirección"
-                required>
-        </div>
-
-    </div>
-
-</section>
-<section class="bloque-formulario">
-
-    <h3>👨‍👩‍👧 Datos del Grupo Familiar</h3>
-
-    <p class="texto-ayuda">
-        Ingrese únicamente los estudiantes que pertenecen al mismo grupo familiar.
-    </p>
-
-    <!-- HIJO 1 -->
-
-    <div class="tarjeta-hijo">
-
-        <h4>👦 Estudiante N.º 1</h4>
+    <!-- DATOS DEL APODERADO -->
+    <section class="bloque-formulario">
+        <h3>👤 Datos del Apoderado</h3>
 
         <div class="grupo-input">
 
+            <div class="campo">
+                <label for="nombre_apoderado">Nombre completo *</label>
+                <input type="text" id="nombre_apoderado"
+                       name="nombre_apoderado"
+                       placeholder="Ingrese nombre completo" required>
+            </div>
+
+            <div class="campo">
+                <label for="rut_apoderado">RUT *</label>
+                <input type="text" id="rut_apoderado"
+                       name="rut_apoderado"
+                       placeholder="12.345.678-9" required>
+            </div>
+
+            <div class="campo">
+                <label for="telefono">Teléfono *</label>
+                <input type="tel" id="telefono"
+                       name="telefono"
+                       placeholder="+56 9 1234 5678" required>
+            </div>
+
+            <div class="campo">
+                <label for="correo">Correo electrónico (opcional)</label>
+                <input type="email" id="correo"
+                       name="correo"
+                       placeholder="correo@ejemplo.cl">
+            </div>
+
             <div class="campo campo-completo">
-                <label>Nombre completo</label>
-                <input
-                    type="text"
-                    name="alumno1_nombre"
-                    placeholder="Nombre completo del estudiante">
-            </div>
-
-            <div class="campo">
-                <label>RUT</label>
-                <input
-                    type="text"
-                    name="alumno1_rut"
-                    placeholder="12.345.678-9">
-            </div>
-
-            <div class="campo">
-                <label>Curso</label>
-
-                <select name="alumno1_curso">
-
-                    <option value="">Seleccione...</option>
-
-                   <option>1° Básico A</option>
-                    <option>1° Básico B</option>
-
-                    <option>2° Básico A</option>
-                    <option>2° Básico B</option>
-
-                    <option>3° Básico A</option>
-                    <option>3° Básico B</option>
-
-                    <option>4° Básico A</option>
-                    <option>4° Básico B</option>
-
-                    <option>5° Básico A</option>
-                    <option>5° Básico B</option>
-
-                    <option>6° Básico A</option>
-                    <option>6° Básico B</option>
-
-                    <option>7° Básico A</option>
-                    <option>7° Básico B</option>
-
-                    <option>8° Básico A</option>
-                    <option>8° Básico B</option>
-
-                    <option>1° Medio A</option>
-                    <option>1° Medio B</option>
-
-                    <option>2° Medio A</option>
-                    <option>2° Medio B</option>
-
-                    <option>3° Medio A</option>
-                    <option>3° Medio B</option>
-
-                    <option>4° Medio A</option>
-                    <option>4° Medio B</option>
-                </select>
-
+                <label for="direccion">Dirección *</label>
+                <input type="text" id="direccion"
+                       name="direccion"
+                       placeholder="Ingrese su dirección" required>
             </div>
 
         </div>
+    </section>
 
-    </div>
+    <!-- GRUPO FAMILIAR -->
+    <section class="bloque-formulario">
+        <h3>👨‍👩‍👧 Datos del Grupo Familiar</h3>
+        <p class="texto-ayuda">
+            Ingrese únicamente los estudiantes que pertenecen al mismo grupo familiar.
+        </p>
 
-    <!-- HIJO 2 -->
+        <!-- ESTUDIANTE 1 -->
+        <div class="tarjeta-hijo">
+            <h4>👦 Estudiante N.º 1</h4>
 
-    <div class="tarjeta-hijo">
+            <div class="grupo-input">
+                <div class="campo campo-completo">
+                    <label for="alumno1_nombre">Nombre completo</label>
+                    <input type="text" id="alumno1_nombre"
+                           name="alumno1_nombre"
+                           placeholder="Nombre completo del estudiante">
+                </div>
 
-        <h4>👧 Estudiante N.º 2</h4>
+                <div class="campo">
+                    <label for="alumno1_rut">RUT</label>
+                    <input type="text" id="alumno1_rut"
+                           name="alumno1_rut" placeholder="12.345.678-9">
+                </div>
+
+                <div class="campo">
+                    <label for="alumno1_curso">Curso</label>
+                    <select id="alumno1_curso" name="alumno1_curso">
+                        <option value="">Seleccione...</option>
+                        <option>1° Básico A</option><option>1° Básico B</option>
+                        <option>2° Básico A</option><option>2° Básico B</option>
+                        <option>3° Básico A</option><option>3° Básico B</option>
+                        <option>4° Básico A</option><option>4° Básico B</option>
+                        <option>5° Básico A</option><option>5° Básico B</option>
+                        <option>6° Básico A</option><option>6° Básico B</option>
+                        <option>7° Básico A</option><option>7° Básico B</option>
+                        <option>8° Básico A</option><option>8° Básico B</option>
+                        <option>1° Medio A</option><option>1° Medio B</option>
+                        <option>2° Medio A</option><option>2° Medio B</option>
+                        <option>3° Medio A</option><option>3° Medio B</option>
+                        <option>4° Medio A</option><option>4° Medio B</option>
+                    </select>
+                </div>
+            </div>
+        </div>
+
+        <!-- ESTUDIANTE 2 -->
+        <div class="tarjeta-hijo">
+            <h4>👧 Estudiante N.º 2</h4>
+
+            <div class="grupo-input">
+                <div class="campo campo-completo">
+                    <label for="alumno2_nombre">Nombre completo</label>
+                    <input type="text" id="alumno2_nombre"
+                           name="alumno2_nombre"
+                           placeholder="Nombre completo del estudiante">
+                </div>
+
+                <div class="campo">
+                    <label for="alumno2_rut">RUT</label>
+                    <input type="text" id="alumno2_rut"
+                           name="alumno2_rut" placeholder="12.345.678-9">
+                </div>
+
+                <div class="campo">
+                    <label for="alumno2_curso">Curso</label>
+                    <select id="alumno2_curso" name="alumno2_curso">
+                        <option value="">Seleccione...</option>
+                        <option>1° Básico A</option><option>1° Básico B</option>
+                        <option>2° Básico A</option><option>2° Básico B</option>
+                        <option>3° Básico A</option><option>3° Básico B</option>
+                        <option>4° Básico A</option><option>4° Básico B</option>
+                        <option>5° Básico A</option><option>5° Básico B</option>
+                        <option>6° Básico A</option><option>6° Básico B</option>
+                        <option>7° Básico A</option><option>7° Básico B</option>
+                        <option>8° Básico A</option><option>8° Básico B</option>
+                        <option>1° Medio A</option><option>1° Medio B</option>
+                        <option>2° Medio A</option><option>2° Medio B</option>
+                        <option>3° Medio A</option><option>3° Medio B</option>
+                        <option>4° Medio A</option><option>4° Medio B</option>
+                    </select>
+                </div>
+            </div>
+        </div>
+
+        <!-- ESTUDIANTE 3 -->
+        <div class="tarjeta-hijo">
+            <h4>🧒 Estudiante N.º 3</h4>
+
+            <div class="grupo-input">
+                <div class="campo campo-completo">
+                    <label for="alumno3_nombre">Nombre completo</label>
+                    <input type="text" id="alumno3_nombre"
+                           name="alumno3_nombre"
+                           placeholder="Nombre completo del estudiante">
+                </div>
+
+                <div class="campo">
+                    <label for="alumno3_rut">RUT</label>
+                    <input type="text" id="alumno3_rut"
+                           name="alumno3_rut" placeholder="12.345.678-9">
+                </div>
+
+                <div class="campo">
+                    <label for="alumno3_curso">Curso</label>
+                    <select id="alumno3_curso" name="alumno3_curso">
+                        <option value="">Seleccione...</option>
+                        <option>1° Básico A</option><option>1° Básico B</option>
+                        <option>2° Básico A</option><option>2° Básico B</option>
+                        <option>3° Básico A</option><option>3° Básico B</option>
+                        <option>4° Básico A</option><option>4° Básico B</option>
+                        <option>5° Básico A</option><option>5° Básico B</option>
+                        <option>6° Básico A</option><option>6° Básico B</option>
+                        <option>7° Básico A</option><option>7° Básico B</option>
+                        <option>8° Básico A</option><option>8° Básico B</option>
+                        <option>1° Medio A</option><option>1° Medio B</option>
+                        <option>2° Medio A</option><option>2° Medio B</option>
+                        <option>3° Medio A</option><option>3° Medio B</option>
+                        <option>4° Medio A</option><option>4° Medio B</option>
+                    </select>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- INFORMACIÓN DEL SOCIO -->
+    <section class="bloque-formulario informacion-socio">
+        <h3>🤝 Información del Socio</h3>
 
         <div class="grupo-input">
-
-            <div class="campo campo-completo">
-                <label>Nombre completo</label>
-                <input
-                    type="text"
-                    name="alumno2_nombre"
-                    placeholder="Nombre completo del estudiante">
-            </div>
-
             <div class="campo">
-                <label>RUT</label>
-                <input
-                    type="text"
-                    name="alumno2_rut"
-                    placeholder="12.345.678-9">
-            </div>
-
-            <div class="campo">
-                <label>Curso</label>
-
-                <select name="alumno2_curso">
-
-                    <option value="">Seleccione...</option>
-
-                    <option>1° Básico A</option>
-                    <option>1° Básico B</option>
-
-                    <option>2° Básico A</option>
-                    <option>2° Básico B</option>
-
-                    <option>3° Básico A</option>
-                    <option>3° Básico B</option>
-
-                    <option>4° Básico A</option>
-                    <option>4° Básico B</option>
-
-                    <option>5° Básico A</option>
-                    <option>5° Básico B</option>
-
-                    <option>6° Básico A</option>
-                    <option>6° Básico B</option>
-
-                    <option>7° Básico A</option>
-                    <option>7° Básico B</option>
-
-                    <option>8° Básico A</option>
-                    <option>8° Básico B</option>
-
-                    <option>1° Medio A</option>
-<option>1° Medio B</option>
-
-<option>2° Medio A</option>
-<option>2° Medio B</option>
-
-<option>3° Medio A</option>
-<option>3° Medio B</option>
-
-<option>4° Medio A</option>
-<option>4° Medio B</option>
-
+                <label for="tipo_socio">Tipo de Socio *</label>
+                <select id="tipo_socio" name="tipo_socio" required>
+                    <option value="">Seleccione una opción</option>
+                    <option value="Nuevo">Socio Nuevo</option>
+                    <option value="Antiguo">Socio Antiguo</option>
                 </select>
-
-            </div>
-
-        </div>
-
-    </div>
-
-    <!-- HIJO 3 -->
-
-    <div class="tarjeta-hijo">
-
-        <h4>🧒 Estudiante N.º 3</h4>
-
-        <div class="grupo-input">
-
-            <div class="campo campo-completo">
-                <label>Nombre completo</label>
-                <input
-                    type="text"
-                    name="alumno3_nombre"
-                    placeholder="Nombre completo del estudiante">
             </div>
 
             <div class="campo">
-                <label>RUT</label>
-                <input
-                    type="text"
-                    name="alumno3_rut"
-                    placeholder="12.345.678-9">
+                <label for="anio_socio">Año de incorporación</label>
+                <input type="number" id="anio_socio" name="anio_socio"
+                       min="2000" max="2100" placeholder="Ejemplo: 2027">
             </div>
 
             <div class="campo">
-                <label>Curso</label>
-
-                <select name="alumno3_curso">
-
-                    <option value="">Seleccione...</option>
-
-                    <option>1° Básico A</option>
-                    <option>1° Básico B</option>
-
-                    <option>2° Básico A</option>
-                    <option>2° Básico B</option>
-
-                    <option>3° Básico A</option>
-                    <option>3° Básico B</option>
-
-                    <option>4° Básico A</option>
-                    <option>4° Básico B</option>
-
-                    <option>5° Básico A</option>
-                    <option>5° Básico B</option>
-
-                    <option>6° Básico A</option>
-                    <option>6° Básico B</option>
-
-                    <option>7° Básico A</option>
-                    <option>7° Básico B</option>
-
-                    <option>8° Básico A</option>
-                    <option>8° Básico B</option>
-
-                    <option>1° Medio A</option>
-                    <option>1° Medio B</option>
-
-                    <option>2° Medio A</option>
-                    <option>2° Medio B</option>
-
-                    <option>3° Medio A</option>
-                    <option>3° Medio B</option>
-
-                    <option>4° Medio A</option>
-                    <option>4° Medio B</option>
-
-                </select>
-
+                <label for="fecha_inscripcion">Fecha de inscripción</label>
+                <input type="date" id="fecha_inscripcion" name="fecha_inscripcion">
             </div>
-
         </div>
+    </section>
 
-    </div>
+    <!-- DATOS DE TRANSFERENCIA -->
+    <section class="datos-transferencia">
+        <h3>🏦 Datos para Transferencia Tesorería</h3>
+        <p><strong>Banco:</strong> Mercado Pago</p>
+        <p><strong>Tipo de Cuenta:</strong> Cuenta Vista</p>
+        <p><strong>N.º Cuenta:</strong> 1002236770</p>
+        <p><strong>Titular:</strong> Carolyn Salazar Urtubia</p>
+        <p><strong>RUT:</strong> 13.009.613-1</p>
+        <p><strong>Correo para comprobantes:</strong> tesoreriacepacor@gmail.com</p>
+    </section>
 
-</section>
-<section class="bloque-formulario informacion-socio">
+    <!-- INFORMACIÓN DE PAGO -->
+    <section class="info-pago">
+        <h3>💳 Información de pago de socio</h3>
 
-    <h3>🤝 Información del Socio</h3>
-
-    <div class="grupo-input">
+        <p>
+            Valor cuota anual socio CEPACOR:
+            <strong>$10.000 por familia</strong>
+        </p>
 
         <div class="campo">
-
-            <label for="tipo_socio">
-                Tipo de Socio *
-            </label>
-
-            <select id="tipo_socio" name="tipo_socio" required>
-
-                <option value="">
-                    Seleccione una opción
+            <label for="forma_pago">Forma de pago *</label>
+            <select id="forma_pago" name="forma_pago" required>
+                <option value="">Seleccione</option>
+                <option value="Transferencia bancaria">Transferencia bancaria</option>
+                <option value="Pago presencial con directiva CEPACOR">
+                    Pago presencial con directiva CEPACOR
                 </option>
-
-                <option value="Nuevo">
-                    Socio Nuevo
-                </option>
-
-                <option value="Antiguo">
-                    Socio Antiguo
-                </option>
-
             </select>
-
         </div>
-
 
         <div class="campo">
-
-            <label for="anio_socio">
-                Año de incorporación
-            </label>
-
-            <input
-                type="number"
-                id="anio_socio"
-                name="anio_socio"
-                min="2000"
-                max="2100"
-                placeholder="Ejemplo: 2026">
-
+            <label for="nombre_pagador">Nombre de la persona que realizó el pago</label>
+            <input type="text" id="nombre_pagador" name="nombre_pagador"
+                   placeholder="Nombre completo">
         </div>
-
 
         <div class="campo">
+            <label for="rut_pagador">RUT de quien realizó el pago</label>
+            <input type="text" id="rut_pagador" name="rut_pagador"
+                   placeholder="12.345.678-9">
+        </div>
 
-            <label for="fecha_inscripcion">
-                Fecha de inscripción
+        <div class="campo">
+            <label for="fecha_transferencia">Fecha de transferencia</label>
+            <input type="date" id="fecha_transferencia" name="fecha_transferencia">
+        </div>
+
+        <div class="campo">
+            <label for="comprobante_pago">Adjuntar comprobante de pago</label>
+            <input type="file" id="comprobante_pago" name="comprobante_pago"
+                   accept=".jpg,.jpeg,.png,.pdf">
+            <p class="texto-ayuda">Tamaño máximo: 5 MB.</p>
+        </div>
+
+        <p class="nota">
+            Si el pago es realizado por una persona distinta al apoderado inscrito,
+            estos datos permitirán identificar correctamente la familia asociada.
+        </p>
+    </section>
+
+    <!-- DECLARACIÓN -->
+    <section class="bloque-formulario seccion-formulario">
+        <h3>📄 Declaración del apoderado</h3>
+
+        <p>
+            Declaro que los datos entregados son correctos y solicito mi incorporación
+            como socio/a del Centro General de Padres y Apoderados CEPACOR del Corona School.
+        </p>
+
+        <p>
+            Acepto que mi aporte permitirá apoyar actividades, proyectos, convenios
+            y beneficios destinados a nuestros alumnos y comunidad educativa.
+        </p>
+
+        <div class="campo checkbox">
+            <label for="acepta_declaracion">
+                <input type="checkbox" id="acepta_declaracion"
+                       name="acepta_declaracion" value="Sí" required>
+                Declaro haber leído y aceptado la información anterior.
             </label>
-
-            <input
-                type="date"
-                id="fecha_inscripcion"
-                name="fecha_inscripcion">
-
         </div>
+    </section>
 
+    <!-- BOTONES: SOLO UNO DE CADA TIPO -->
+    <div class="botones-formulario">
+        <button type="submit" id="btnEnviar" class="boton-enviar">
+            🟢 Enviar inscripción
+        </button>
+
+        <button type="button" class="boton-imprimir">
+            🖨️ Descargar ficha para imprimir
+        </button>
     </div>
-
-</section>
-<section class="datos-transferencia">
-
-    <h3>🏦 Datos para Transferencia</h3>
-
-    <p><strong>Banco:</strong> Coopeuch</p>
-
-    <p><strong>Tipo de Cuenta:</strong> Cuenta Vista</p>
-
-    <p><strong>N.º Cuenta:</strong> 240749799</p>
-
-    <p><strong>Titular:</strong> Paula González De La Barrera</p>
-
-    <p><strong>RUT:</strong> 12.210.283-1</p>
-
-    <p>
-        <strong>Correo para comprobantes:</strong> 
-        cepacor@coronaschool.cl
-    </p>
-
-
-</section>
-<!-- INFORMACIÓN DE PAGO -->
-
-<section class="info-pago">
-
-
-    <h3>💳 Información de pago de socio</h3>
-
-    <p>
-        Valor cuota anual socio CEPACOR: 
-        <strong>$10.000 por familia</strong>
-    </p>
-
-
-    <div class="campo">
-
-        <label>Forma de pago</label>
-
-        <select>
-            <option value="">Seleccione</option>
-            <option>Transferencia bancaria</option>
-            <option>Pago presencial con directiva CEPACOR</option>
-        </select>
-
-    </div>
-
-
-    <div class="campo">
-
-        <label>
-            Nombre de la persona que realizó el pago
-        </label>
-
-        <input 
-        type="text"
-        placeholder="Nombre completo">
-
-    </div>
-
-
-    <div class="campo">
-
-        <label>
-            RUT de quien realizó la transferencia
-        </label>
-
-        <input 
-        type="text"
-        placeholder="Ejemplo: 12.345.678-9">
-
-    </div>
-
-
-    <div class="campo">
-
-        <label>
-            Fecha de transferencia
-        </label>
-
-        <input type="date">
-
-    </div>
-
-
-    <div class="campo">
-
-        <label>
-            Adjuntar comprobante de pago
-        </label>
-
-        <input type="file">
-
-    </div>
-
-
-    <p class="nota">
-        Si el pago es realizado por una persona distinta al apoderado inscrito,
-        estos datos permitirán identificar correctamente la familia asociada.
-    </p>
-
-
-</div>
-
-
-
-<!-- DECLARACIÓN -->
-
-<section class="bloque-formulario seccion-formulario">
-
-    <h3>📄 Declaración del apoderado</h3>
-
-
-    <p>
-        Declaro que los datos entregados son correctos y solicito mi incorporación
-        como socio/a del Centro General de Padres y Apoderados CEPACOR del Corona School.
-    </p>
-
-
-    <p>
-        Acepto que mi aporte permitirá apoyar actividades, proyectos, convenios
-        y beneficios destinados a nuestros alumnos y comunidad educativa.
-    </p>
-
-
-    <div class="campo checkbox">
-
-        <label>
-            <input type="checkbox">
-            Declaro haber leído y aceptado la información anterior.
-        </label>
-
-        </div>
-        
-  </section>
-
-
-
-
-<button type="submit" class="boton-enviar">
-    🟢 Enviar inscripción
-</button>
-
-
-<button type="button" class="boton-imprimir">
-    🖨️ Descargar ficha para imprimir
-</button>
 
 </form>
-
 </main>
 
-</body>
+<script>
+const formulario = document.getElementById("fichaSocio");
+const botonEnviar = document.getElementById("btnEnviar");
 
+const URL_SCRIPT = "https://script.google.com/macros/s/AKfycbzHaUcq1pPUSHWTgvct3tHz6i-7bwNlZkDPr_5rHyY_9zzM5YU-NIW8wInlCQ7puuR4/exec";
+
+// Imprimir la ficha
+document.querySelector(".boton-imprimir").addEventListener("click", function () {
+    window.print();
+});
+
+// Enviar inscripción a Google Apps Script
+formulario.addEventListener("submit", async function (e) {
+    e.preventDefault();
+
+    botonEnviar.disabled = true;
+    botonEnviar.textContent = "Enviando inscripción...";
+
+    try {
+        const datos = Object.fromEntries(
+            new FormData(formulario).entries()
+        );
+
+        const campoArchivo = document.getElementById("comprobante_pago");
+        const archivo = campoArchivo.files[0];
+
+        // Comprobar que el archivo no supere 5 MB
+        if (archivo) {
+            if (archivo.size > 5 * 1024 * 1024) {
+                throw new Error("El comprobante no debe superar los 5 MB.");
+            }
+
+            // Convertir el archivo a base64 para enviarlo a Drive
+            datos.comprobanteArchivo = {
+                nombre: archivo.name,
+                tipo: archivo.type || "application/octet-stream",
+                base64: await new Promise((resolve, reject) => {
+                    const lector = new FileReader();
+
+                    lector.onload = () => {
+                        resolve(lector.result.split(",")[1]);
+                    };
+
+                    lector.onerror = () => {
+                        reject(new Error("No se pudo leer el archivo."));
+                    };
+
+                    lector.readAsDataURL(archivo);
+                })
+            };
+        }
+
+        const respuesta = await fetch(URL_SCRIPT, {
+            method: "POST",
+            headers: {
+                "Content-Type": "text/plain;charset=utf-8"
+            },
+            body: JSON.stringify(datos)
+        });
+
+        const resultado = await respuesta.text();
+
+        if (!respuesta.ok || !resultado.trim().startsWith("OK")) {
+            throw new Error(resultado || "No se pudo confirmar el envío.");
+        }
+
+        alert("Inscripción enviada correctamente.");
+        formulario.reset();
+
+    } catch (error) {
+        alert("No se pudo enviar: " + error.message);
+        console.error(error);
+
+    } finally {
+        botonEnviar.disabled = false;
+        botonEnviar.textContent = "🟢 Enviar inscripción";
+    }
+});
+</script>
+
+</body>
 </html>

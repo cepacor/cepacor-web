@@ -1074,16 +1074,19 @@
 
 
 
-        <div class="tarjeta">
+       <div class="tarjeta tarjeta-momentos">
 
-            <h3>🤝 Campañas Solidarias</h3>
+    <h3>🤝 Momentos que nos Unen</h3>
 
-            <p>
+    <p>
+        Celebraciones, iniciativas y gestos de cariño que reflejan
+        el compromiso de las familias con nuestros estudiantes
+        y toda la comunidad educativa.
+    </p>
 
-                Acciones de apoyo para nuestra
+</div>
 
-                comunidad educativa.
-
+           
             </p>
 
         </div>
@@ -1111,135 +1114,165 @@
 
      
 <!-- ACTIVIDAD 2 -->
-
+<!-- ACTIVIDADES Y CELEBRACIONES -->
 <div class="cuadro-actividad"
      onclick="abrirGalerias('foto1')">
 
-    <div class="icono-actividad">🎉</div>
+    <img src="imagenes/galerias/celebraciones/1.jpeg"
+         alt="Actividades y Celebraciones">
 
     <h3>Actividades y Celebraciones</h3>
-
-    <p>Ver fotografías</p>
-
+    <p>Momentos y celebraciones de nuestra comunidad escolar.</p>
+    <span>Ver fotografías →</span>
 </div>
 
-<!-- ACTIVIDAD 3 -->
-
+<!-- DONACIONES Y APORTES -->
 <div class="cuadro-actividad"
      onclick="abrirGalerias('foto2')">
 
-    <div class="icono-actividad">🎁</div>
+    <img src="imagenes/galerias/donaciones/0.jpeg"
+         alt="Donaciones y Aportes">
 
     <h3>Donaciones y Aportes</h3>
-
-    <p>Ver fotografías</p>
-
+    <p>Conoce los aportes y entregas realizados por CEPACOR.</p>
+    <span>Ver fotografías →</span>
 </div>
-<!-- ACTIVIDAD 4 -->
-
-<div class="cuadro-actividad"
+<!-- CEPACOR EN ACCIÓN -->
+<div class="cuadro-actividad tarjeta-horizontal"
      onclick="abrirGalerias('foto3')">
 
-    <div class="icono-actividad">💚</div>
+    <img src="imagenes/galerias/cepacor/1.jpeg"
+     alt="CEPACOR en Acción">
 
-    <h3>CEPACOR en Acción</h3>
-
-    <p>Ver fotografías</p>
-
+    <div class="contenido-tarjeta">
+        <h3>CEPACOR en Acción</h3>
+        <p>Iniciativas y actividades de nuestra directiva.</p>
+        <span>Ver fotografías →</span>
+    </div>
 </div>
-<!-- ACTIVIDAD 5: GLORIAS NAVALES -->
 
-<div class="cuadro-actividad"
-     onclick="abrirGalerias('foto-glorias')">
-
-    <div class="icono-actividad">⚓</div>
-
-    <h3>Glorias Navales</h3>
-
-    <p>Ver fotografías</p>
-
-</div>
-</div>
  
 
 <!-- ==================== FOTOS DE LA GALERÍA ==================== -->
 
 <div id="foto-inicio" class="ventana-foto">
-
     <button class="cerrar-foto" onclick="cerrarGalerias()">✕</button>
-
-    <img src="imagenes/galerias/foto1.jpeg"
+    <img src="imagenes/galerias/PRIMER%20DIA%20DE%20CLASES.jpeg"
          alt="Inicio de Clases CEPACOR 2026">
-
     <h3>🎒 Inicio de Clases 2026</h3>
-
 </div>
 
-
+<!-- ACTIVIDADES Y CELEBRACIONES -->
 <div id="foto1" class="ventana-foto">
-
     <button class="cerrar-foto" onclick="cerrarGalerias()">✕</button>
-
-    <img src="imagenes/galerias/celebraciones/foto1.jpeg"
-         alt="Actividades y Celebraciones">
-
     <h3>🎉 Actividades y Celebraciones</h3>
-
-</div>
-
-
-<div id="foto2" class="ventana-foto">
-
-    <button class="cerrar-foto" onclick="cerrarGalerias()">✕</button>
-
-    <img src="imagenes/galerias/foto3.jpeg"
-         alt="Donaciones y Aportes">
-
-    <h3>🎁 Donaciones y Aportes</h3>
-
-</div>
-
-
-<div id="foto3" class="ventana-foto">
-
-    <button class="cerrar-foto" onclick="cerrarGalerias()">✕</button>
-
-    <img src="imagenes/galerias/foto4.jpeg"
-         alt="CEPACOR en Acción">
-
-    <h3>💚 CEPACOR en Acción</h3>
-
-</div>
-
-
-<div id="foto-glorias" class="ventana-foto">
-
-    <button class="cerrar-foto" onclick="cerrarGalerias()">✕</button>
-
-    <h3>⚓ Glorias Navales</h3>
-
     <div class="carrusel-glorias">
-        <button class="flecha-glorias" onclick="cambiarFotoGlorias(-1)">❮</button>
-
-        <img id="imagen-glorias"
-             src="imagenes/galerias/glorias-navales/desfile%2021%20mayo.jpeg"
-             alt="Desfile de Glorias Navales">
-
-        <button class="flecha-glorias" onclick="cambiarFotoGlorias(1)">❯</button>
+        <button class="flecha-glorias" onclick="cambiarFotoGaleria('foto1',-1)">❮</button>
+        <img id="imagen-foto1" src="" alt="Actividades y Celebraciones">
+        <button class="flecha-glorias" onclick="cambiarFotoGaleria('foto1',1)">❯</button>
     </div>
-
-    <p id="contador-glorias">1 de 2</p>
-
+    <p id="contador-foto1"></p>
 </div>
 
+<!-- DONACIONES Y APORTES -->
+<div id="foto2" class="ventana-foto">
+    <button class="cerrar-foto" onclick="cerrarGalerias()">✕</button>
+    <h3>🎁 Donaciones y Aportes</h3>
+    <div class="carrusel-glorias">
+        <button class="flecha-glorias" onclick="cambiarFotoGaleria('foto2',-1)">❮</button>
+        <img id="imagen-foto2" src="" alt="Donaciones y Aportes">
+        <button class="flecha-glorias" onclick="cambiarFotoGaleria('foto2',1)">❯</button>
+    </div>
+    <p id="contador-foto2"></p>
+</div>
 
+<!-- CEPACOR EN ACCIÓN -->
+<div id="foto3" class="ventana-foto">
+    <button class="cerrar-foto" onclick="cerrarGalerias()">✕</button>
+    <h3>💚 CEPACOR en Acción</h3>
+    <div class="carrusel-glorias">
+        <button class="flecha-glorias" onclick="cambiarFotoGaleria('foto3',-1)">❮</button>
+        <img id="imagen-foto3" src="" alt="CEPACOR en Acción">
+        <button class="flecha-glorias" onclick="cambiarFotoGaleria('foto3',1)">❯</button>
+    </div>
+    <p id="contador-foto3"></p>
+</div>
+
+<!-- GLORIAS NAVALES -->
+<div id="foto-glorias" class="ventana-foto">
+    <button class="cerrar-foto" onclick="cerrarGalerias()">✕</button>
+    <h3>⚓ Glorias Navales</h3>
+    <div class="carrusel-glorias">
+        <button class="flecha-glorias" onclick="cambiarFotoGaleria('foto-glorias',-1)">❮</button>
+        <img id="imagen-foto-glorias" src="" alt="Desfile de Glorias Navales">
+        <button class="flecha-glorias" onclick="cambiarFotoGaleria('foto-glorias',1)">❯</button>
+    </div>
+    <p id="contador-foto-glorias"></p>
+</div>
 
 <!-- ==================== JAVASCRIPT GALERÍA ==================== -->
 
 <script>
 
-function abrirGalerias(id) {
+var fotosGalerias = {
+    'foto1': [
+        'imagenes/galerias/celebraciones/1.jpeg',
+        'imagenes/galerias/celebraciones/2.jpeg',
+        'imagenes/galerias/celebraciones/3.jpeg',
+        'imagenes/galerias/celebraciones/4.jpeg',
+        'imagenes/galerias/celebraciones/5.jpeg',
+        'imagenes/galerias/celebraciones/6.jpeg',
+        'imagenes/galerias/celebraciones/7.jpeg',
+        'imagenes/galerias/celebraciones/8.jpeg',
+        'imagenes/galerias/celebraciones/9.jpeg',
+        'imagenes/galerias/celebraciones/10.jpeg',
+        'imagenes/galerias/celebraciones/11.jpeg',
+        'imagenes/galerias/celebraciones/12.jpeg',
+        'imagenes/galerias/celebraciones/13.jpeg',
+        'imagenes/galerias/celebraciones/14.jpeg',
+        'imagenes/galerias/celebraciones/15.jpeg',
+        'imagenes/galerias/celebraciones/16.jpeg',
+        'imagenes/galerias/celebraciones/17.jpeg',
+        'imagenes/galerias/celebraciones/18.jpeg',
+        'imagenes/galerias/celebraciones/19.jpeg',
+        'imagenes/galerias/celebraciones/20.jpeg',
+        'imagenes/galerias/celebraciones/21.jpeg',
+        'imagenes/galerias/celebraciones/22.jpeg'
+    ],
 
+    'foto2': [
+    'imagenes/galerias/donaciones/0.jpeg',
+    'imagenes/galerias/donaciones/1.jpeg',
+    'imagenes/galerias/donaciones/2.jpeg',
+    'imagenes/galerias/donaciones/3.jpeg',
+    'imagenes/galerias/donaciones/4.jpeg',
+    'imagenes/galerias/donaciones/5.jpeg',
+    'imagenes/galerias/donaciones/6.jpeg',
+    'imagenes/galerias/donaciones/7.jpeg',
+    'imagenes/galerias/donaciones/8.jpeg',
+    'imagenes/galerias/donaciones/9.jpeg'
+],
+'foto3': [
+    'imagenes/galerias/cepacor/1.jpeg',
+    'imagenes/galerias/cepacor/2.jpeg',
+    'imagenes/galerias/cepacor/3.jpeg',
+    'imagenes/galerias/cepacor/4.jpeg',
+    'imagenes/galerias/cepacor/5.jpeg',
+    'imagenes/galerias/cepacor/6.jpeg',
+    'imagenes/galerias/cepacor/7.jpeg',
+    'imagenes/galerias/cepacor/8.jpeg',
+    'imagenes/galerias/cepacor/9.jpeg',
+    'imagenes/galerias/cepacor/10.jpeg',
+    'imagenes/galerias/cepacor/11.jpeg',
+    'imagenes/galerias/cepacor/12.jpeg'
+],
+
+};
+
+
+var indicesGalerias = {};
+
+function abrirGalerias(id) {
     document.querySelectorAll('.ventana-foto').forEach(function(foto) {
         foto.classList.remove('mostrar');
     });
@@ -1250,41 +1283,89 @@ function abrirGalerias(id) {
         fotoSeleccionada.classList.add('mostrar');
     }
 
-}
-
-function cerrarGalerias() {
-
-    document.querySelectorAll('.ventana-foto').forEach(function(foto) {
-        foto.classList.remove('mostrar');
-    });
-
-}
-
-function cambiarFotoGlorias(direccion) {
-    var imagen = document.getElementById('imagen-glorias');
-    var contador = document.getElementById('contador-glorias');
-
-   var fotos = [
-    'imagenes/galerias/glorias-navales/desfile%2021%20mayo.jpeg',
-    'imagenes/galerias/glorias-navales/GLORIAS%20NAVALES.jpeg'
-];
-
-    var indice = Number(imagen.dataset.indice || 0);
-
-    indice = (indice + direccion + fotos.length) % fotos.length;
-
-    imagen.src = fotos[indice];
-    imagen.dataset.indice = indice;
-
-    if (contador) {
-        contador.textContent = (indice + 1) + ' de ' + fotos.length;
+    if (fotosGalerias[id]) {
+        indicesGalerias[id] = 0;
+        actualizarFotoGaleria(id);
     }
 }
 
+function cerrarGalerias() {
+    document.querySelectorAll('.ventana-foto').forEach(function(foto) {
+        foto.classList.remove('mostrar');
+    });
+}
+
+function actualizarFotoGaleria(id) {
+    var imagen = document.getElementById('imagen-' + id);
+    var contador = document.getElementById('contador-' + id);
+    var fotos = fotosGalerias[id];
+    var indice = indicesGalerias[id] || 0;
+
+    imagen.src = fotos[indice];
+    contador.textContent = (indice + 1) + ' de ' + fotos.length;
+}
+function cambiarFotoGaleria(id, direccion) {
+
+    console.log("Galería seleccionada:", id);
+
+    var fotos = fotosGalerias[id];
+
+    if (!fotos) {
+        console.error("No existe esta galería:", id);
+        return;
+    }
+
+    indicesGalerias[id] =
+        ((indicesGalerias[id] || 0) + direccion + fotos.length) % fotos.length;
+
+    actualizarFotoGaleria(id);
+}
 </script>
-
 </section>
 </section>
 
+<!-- BOTÓN VOLVER AL INICIO -->
+<button id="volverInicio" title="Volver al inicio" aria-label="Volver al inicio">
+    ↑
+</button>
+
+<style>
+#volverInicio {
+    display: none;
+    position: fixed;
+    bottom: 25px;
+    right: 25px;
+    z-index: 9999;
+    width: 48px;
+    height: 48px;
+    border: none;
+    border-radius: 50%;
+    background: #355E3B;
+    color: white;
+    font-size: 30px;
+    cursor: pointer;
+    box-shadow: 0 3px 10px rgba(0,0,0,0.25);
+}
+
+#volverInicio:hover {
+    background: #F4C430;
+    color: #355E3B;
+}
+</style>
+
+<script>
+const botonVolver = document.getElementById('volverInicio');
+
+window.addEventListener('scroll', function() {
+    botonVolver.style.display = window.scrollY > 300 ? 'block' : 'none';
+});
+
+botonVolver.addEventListener('click', function() {
+    window.scrollTo({
+        top: 0,
+        behavior: 'smooth'
+    });
+});
+</script>
 </body>
 </html>

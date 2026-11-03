@@ -1301,13 +1301,23 @@ function actualizarFotoGaleria(id) {
     var fotos = fotosGalerias[id];
     var indice = indicesGalerias[id] || 0;
 
+    if (!imagen || !contador || !fotos || !fotos[indice]) {
+        console.error("No se encontró la imagen o galería:", id);
+        return;
+    }
+
+    imagen.onload = function() {
+        console.log("Fotografía cargada:", fotos[indice]);
+    };
+
+    imagen.onerror = function() {
+        console.error("No se pudo cargar:", fotos[indice]);
+    };
+
     imagen.src = fotos[indice];
     contador.textContent = (indice + 1) + ' de ' + fotos.length;
 }
-function cambiarFotoGaleria(id, direccion) {
-
-    console.log("Galería seleccionada:", id);
-
+   function cambiarFotoGaleria(id, direccion) {
     var fotos = fotosGalerias[id];
 
     if (!fotos) {
